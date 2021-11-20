@@ -1,0 +1,254 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0; 
+}
+.menu{
+    top: 0;
+    height: 15vh;
+    width: 100%;
+    background-color: #741111;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    
+}
+.divTitulo{
+    width: 26%;
+    font-size: 70px;
+   text-align: center;
+   color: #ffff;
+   font-family: 'Petemoss', cursive;
+   
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    width: 74% ;
+    justify-content: end;
+    list-style: none;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Petemoss', cursive;
+    padding-right: 35px;
+    color: #ffff; 
+    align-items: center;
+}
+.container li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.botaoSair{
+    background-color: #741111;
+    border-radius: 8px;
+    border: 2px solid #ffff;
+    margin-left: 3%;
+    width: 10%;
+    height: 70%;
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Petemoss', cursive;
+    font-size: 33px;
+    transition: 0.5s;
+}
+.botaoSair:hover{
+    width: 11%;
+    font-size: 38px;
+}
+.textoBotao {
+    margin-top: -8%;
+}
+.imgCozinhando{
+    background-image: url("https://images.pexels.com/photos/6287283/pexels-photo-6287283.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-top: 20vh;
+}
+.divEntrada{
+    background-color: #741111;
+    width: 28%;
+    height: 65vh;
+    margin-left: 60%; 
+    padding: 10px;
+   margin-top: 5vh;
+}
+.divEntrada .imgEntrada{
+    background-image: url("https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80");
+    background-size: cover;
+    width: 100%;
+    height: 45vh
+}
+.divEntrada span{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Petemoss', cursive;
+    font-size: 40px;
+    line-height: 1.0cm;
+}
+.divReceitas{
+    background-color: #741111;
+    height: 150vh;
+    width: 100%;
+    padding-top: 10%;
+}
+.carbonara{
+    background-color: #EDBE7A;
+    width: 28%;
+    height: 55vh;
+    margin-left: 3%; 
+    padding: 10px;
+}
+.imgCarbonara{
+    background-image: url("../imagem/WhatsApp\ Image\ 2021-11-15\ at\ 23.28.26.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 45vh;
+}
+.carbonara span{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.pernilMexicano{
+    background-color: #EDBE7A;
+    width: 28%;
+    height: 55vh;
+    margin-left: 35%; 
+    padding: 10px;
+    margin-top: -27%;
+}
+.pernilMexicano .imgPernilMexicano{
+    background-image: url("../imagem/WhatsApp\ Image\ 2021-11-15\ at\ 23.54.14.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 45vh;
+}
+.pernilMexicano span{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.batataArgentina{
+  background-color: #EDBE7A;
+  background-color: #EDBE7A;
+  width: 28%;
+  height: 55vh;
+  margin-left: 67%; 
+  padding: 10px;
+  margin-top: -27%;
+}
+.batataArgentina .imgBatataArgentina{
+    background-image: url("https://s2.glbimg.com/e3bujybss4E33CvefHzgwK4kpCo=/0x0:610x300/984x0/smart/filters:strip_icc()/s.glbimg.com/po/rc/media/2012/06/13/15/12/39/456/RECEITA_DE_BATATA_ASSADA_COM_QUEIJO_610x300.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 45vh;   
+}
+.batataArgentina span {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;  
+}
+.paoDeLo{
+    background-color: #EDBE7A;
+    width: 28%;
+    height: 55vh;
+    margin-left: 3%; 
+    padding: 10px;
+    margin-top: 70px;
+}
+.paoDeLo .imgPaoDelo{
+    background-image: url("../imagem/WhatsApp\ Image\ 2021-11-17\ at\ 14.42.16.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 45vh; 
+}
+.paoDeLo span{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;  
+}
+.tortaDeLimao{
+    background-color: #EDBE7A;
+    width: 28%;
+    height: 55vh;
+    margin-left: 35%; 
+    padding: 10px;
+    margin-top: -364px;
+}
+.tortaDeLimao .imgTortaDeLimao{
+    background-image: url("../imagem/WhatsApp\ Image\ 2021-11-17\ at\ 15.02.05.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 45vh; 
+}
+.tortaDeLimao span{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;  
+}
+.carolina{
+    background-color: #EDBE7A;
+    width: 28%;
+    height: 55vh;
+    margin-left: 67%; 
+    padding: 10px;
+    margin-top: -364px;
+}
+.imgCarolina{
+    background-image: url("https://minews.com.br/img/350x350/1/0/png/arquivos/224/conteudo/posts/538843.jpg?1487593051");
+    background-size: cover;
+    width: 100%;
+    height: 45vh; 
+}
+.carolina span{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.informacoes{
+    background-color: #741111;
+    height: 30vh;
+    margin-top: -20px;
+}
+.informacoes p{
+    color: #fff;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.socialMedias {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socialMedias li {
+    margin: 0 10px;
+}
+
+.socialMedias a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+}

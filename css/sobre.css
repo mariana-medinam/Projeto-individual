@@ -1,0 +1,299 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0; 
+}
+.menu{
+    height: 15vh;
+    width: 100%;
+    background-color: #741111;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    
+}
+.divTitulo{
+    width: 26%;
+    font-size: 70px;
+   text-align: center;
+   color: #ffff;
+   font-family: 'Petemoss', cursive;
+   
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    width: 74% ;
+    justify-content: end;
+    list-style: none;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Petemoss', cursive;
+    padding-right: 35px;
+    color: #ffff; 
+    align-items: center;
+}
+.container li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.botaoSair{
+    background-color: #741111;
+    border-radius: 8px;
+    border: 2px solid #ffff;
+    margin-left: 3%;
+    width: 10%;
+    height: 70%;
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Petemoss', cursive;
+    font-size: 33px;
+    transition: 0.5s;
+}
+.botaoSair:hover{
+    width: 11%;
+    font-size: 38px;
+}
+.textoBotao {
+    margin-top: -8%;
+}
+.imgSushi{
+    background-image: url("https://images.unsplash.com/photo-1611143669185-af224c5e3252?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-top: 20vh;
+}
+.trechoSobreMim{
+    background-color: #741111;
+    width: 28%;
+    height: 75vh;
+    margin-left: 60%; 
+    padding: 10px;
+    margin-top: 5vh;
+}
+.trechoSobreMim .imgFotoMinha{
+    background-image: url("../imagem/WhatsApp\ Image\ 2021-11-20\ at\ 12.37.19.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+}
+.trechoSobreMim span{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Petemoss', cursive;
+    font-size: 30px;
+    
+  
+}
+
+.sobreMim {
+    background-color: #741111;
+    height: 110vh;
+}
+
+.sobreMim span {
+    margin-left: 65%;
+    font-family: 'Petemoss', cursive;
+    font-size: 50px;
+    color: #fff;
+}
+
+.sobreMim p{
+    margin-left: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.imgSushiDois{
+    background-image: url("https://images.unsplash.com/photo-1611143669185-af224c5e3252?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh; 
+}
+.valores{
+    background-color: #741111;
+    height: 80vh;
+    padding-top: 10vh; 
+}
+.valores span{
+    width: 26%;
+    margin-left: 10%;
+    font-size: 200px;
+    color: #ffff;
+    font-family: 'Petemoss', cursive;
+}
+.valores .respeito{
+    background-color: #EDBE7A;
+    width: 20%;
+    height: 30vh;
+    margin-left: 50%; 
+    margin-top: -35%;
+    padding: 10px;
+}
+.respeito .tituloRespeito{
+    font-family: 'Petemoss', cursive;
+    font-size: 50px;
+    color: #000;
+}
+.respeito span{
+    font-family: 'Petemoss', cursive;
+    font-size: 25px;
+    color: #000;
+}
+.valores .organizacao{
+    background-color: #EDBE7A;
+    width: 20%;
+    height: 30vh;
+    margin-left: 75%; 
+    margin-top: -15.5%;
+    padding: 10px;    
+}
+.organizacao .tituloOrganizacao{
+    font-family: 'Petemoss', cursive;
+    font-size: 50px;
+    color: #000;
+}
+.organizacao span{
+    font-family: 'Petemoss', cursive;
+    font-size: 21px;
+    color: #000; 
+}
+.valores .dedicacao{
+    background-color: #EDBE7A;
+    width: 20%;
+    height: 30vh;
+    margin-left:50%; 
+    padding: 10px;  
+}
+.dedicacao .tituloDedicacao{
+    font-family: 'Petemoss', cursive;
+    font-size: 50px;
+    color: #000;
+}
+.dedicacao span{
+    font-family: 'Petemoss', cursive;
+    font-size: 25px;
+    color: #000; 
+}
+.valores .amor{
+    background-color: #EDBE7A;
+    width: 20%;
+    height: 30vh;
+    margin-left: 75%; 
+    margin-top: -15.4%;
+    padding: 10px; 
+}
+.amor .tituloAmor{
+    font-family: 'Petemoss', cursive;
+    font-size: 50px;
+    color: #000;
+}
+.amor span{
+    font-family: 'Petemoss', cursive;
+    font-size: 25px;
+    color: #000;  
+}
+.imgSushiTres{
+    background-image: url("https://images.unsplash.com/photo-1611143669185-af224c5e3252?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh; 
+}
+.programa{
+    background-color: #741111;
+    height: 60vh;
+    padding-top: 10vh;
+}
+.programa .masterChef{
+    background-color: #EDBE7A;
+    margin-left: 3%;
+    margin-top: -2%;
+    width: 25%;
+    height: 55vh;
+    padding: 10px;
+}
+.masterChef .imgMasterChef{
+    background-image: url("../imagem/WhatsApp\ Image\ 2021-11-20\ at\ 11.25.43.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 55vh
+}
+.sugarRush{
+    background-color: #EDBE7A;
+    margin-left: 35%;
+    margin-top: -27%;
+    width: 25%;
+    height: 55vh;
+    padding: 10px;
+}
+.sugarRush .imgSugarRush{
+    background-image: url("https://cdn.fstatic.com/media/movies/covers/2019/07/ffhfhfghfghg.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 55vh
+}
+.cakeBoss{
+    background-color: #EDBE7A;
+    margin-left: 68%;
+    margin-top: -26.9%;
+    width: 25%;
+    height: 55vh;
+    padding: 10px;
+}
+.cakeBoss .imgCakeBoss{
+    background-image: url("https://images-na.ssl-images-amazon.com/images/I/71ooSRpsxwL.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 55vh;
+}
+.imgSushiQuarta{
+    background-image: url("https://images.unsplash.com/photo-1611143669185-af224c5e3252?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+}
+.informacoes{
+    background-color: #741111;
+    height: 30vh;
+    margin-top: -20px;
+}
+.informacoes p{
+    color: #fff;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.socialMedias {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socialMedias li {
+    margin: 0 10px;
+}
+
+.socialMedias a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+}
