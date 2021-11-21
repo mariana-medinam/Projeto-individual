@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> MasterMari| Cadastro</title>
+
+
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Petemoss&display=swap" rel="stylesheet">
+<link rel="icon" href="https://cdn-icons.flaticon.com/png/512/3726/premium/3726102.png?token=exp=1636819043~hmac=f3f916d7ff15e10e6d0fef2b1058706e">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+
+<body>
+
+    <!--header inicio-->
+   
+    
+        <div class="menu">
+           <div class="divTitulo">
+              MasterMari
+           </div>
+           <div class="container">
+              <li>
+
+                  <a href="index.html">
+                 <ul>Inicio</ul>
+                  </a>
+
+                  <a href="cadastro.html">
+                 <ul>Cadastro</ul>
+                  </a>
+                  
+                  <a href="login.html">
+                 <ul>Login</ul>
+                  </a>
+              </li>
+           </div>
+        </div>
+        <div class="imgCamarao">
+            
+    <div class="banner-login ">
+        <div class="container ">
+            <div style="height: 550px;" class="card medio">
+              
+                <div class="formulario">
+                    <div class="div_form">
+                        Nome: <br>
+                        <input  id="nome_input" type="text" placeholder="Ada Lovelace">
+                        <br>
+                        E-mail: <br>
+                        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                        <br>
+                        Senha: <br>
+                        <input id="senha_input" type="password" placeholder="******">
+                        <br>
+                        Confirmação da Senha: <br>
+                        <input id="confirmacao_senha_input" type="password" placeholder="******">
+                        <br> <br>
+                        <button class="btn" onclick="cadastrar()">Cadastrar</button>
+                    </div>
+                </div>
+                <div id="div_aguardar" class="loading-div" style="display: none;">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     </div>
+    <!--header fim-->
+
+    <!--footer inicio-->
+    <footer>
+        <div class="informacoes">
+            <p>Quer ficar por dentro de todas as novidades?</p>
+            <p>Cadastre-se no nosso site agora</p>
+            <p>E fique por dentro de tudo do mundo da Gastronomia</p>
+            <p>Nós acompanhe também pelas nossas redes sociais</p>
+            <ul class="socialMedias">
+               <li><a href="https://github.com/mariana-medinam"><i class="fa fa-github-square"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/mariana-monteiro-medina-44a5ba200"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+     </footer>
+    <!--footer fim-->
+
+
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+        aguardar();
+
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nomeVar,
+                email: emailVar,
+                senha: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+    }
+
+</script>

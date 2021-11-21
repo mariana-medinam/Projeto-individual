@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> MasterMari | Login</title>
+
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Petemoss&display=swap" rel="stylesheet">
+<link rel="icon" href="https://cdn-icons.flaticon.com/png/512/3726/premium/3726102.png?token=exp=1636819043~hmac=f3f916d7ff15e10e6d0fef2b1058706e">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+</head>
+
+<body>
+
+    <!--Header-->
+
+    
+    <div class="menu">
+        <div class="divTitulo">
+           MasterMari
+        </div>
+        <div class="container">
+           <li>
+
+               <a href="../html/inicio.html">
+              <ul>Inicio</ul>
+               </a>
+
+               <a href="../html/cadastro_limpo_sem_form.html">
+              <ul>Cadastro</ul>
+               </a>
+               
+               <a href="../html/login.html">
+              <ul>Login</ul>
+               </a>
+           </li>
+        </div>
+     </div>
+     <div class="imgCamarao">
+
+
+    <div class="banner-login">
+        <div class="container">
+            <div class="card medio"> 
+                <div class="formulario">
+                    <div class="div_form">
+                        E-mail: <br>
+                        <input id="email_input" type="text" placeholder="Login">
+                        <br>
+                        Senha: <br>
+                        <input id="senha_input" type="password" placeholder="******">
+                        <br> <br>
+                        <button class="btn" onclick="entrar()">
+                            Entrar
+                        </button>
+                    </form>
+
+
+                </div>
+
+                <div id="div_aguardar" class="loading-div" style="display: none;">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+
+                </div>
+            </div>
+        </div>
+    </div> 
+    </div>
+    </div>
+
+    <!--footer inicio-->
+    <footer>
+        <div class="informacoes">
+            <p>Quer ficar por dentro de todas as novidades?</p>
+            <p>Cadastre-se no nosso site agora</p>
+            <p>E fique por dentro de tudo do mundo da Gastronomia</p>
+            <p>Nós acompanhe também pelas nossas redes sociais</p>
+            <ul class="socialMedias">
+               <li><a href="https://github.com/mariana-medinam"><i class="fa fa-github-square"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/mariana-monteiro-medina-44a5ba200"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+     </footer>
+
+    <!-- modal?
+
+    <div id="div_modal" class="div-modal">
+        <div id="modal_backdrop" onclick="fecharModal()" class="modal-backdrop">
+        </div>
+        <div id="modal_container" class="modal-container">
+            <button onclick="fecharModal()">fechar modal</button>
+        </div>
+    </div> -->
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    function limparFormulario() {
+        document.getElementById("form_login").reset();
+    }
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (emailVar == "" || senhaVar == "") {
+            window.alert("Preencha todos os campos para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: emailVar,
+                senha: senhaVar,
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>
