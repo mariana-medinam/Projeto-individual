@@ -76,6 +76,10 @@ body {
     height: 100vh;
     padding-top: 20vh;
 }
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
 .divEntrada{
     background-color: #741111;
     width: 28%;

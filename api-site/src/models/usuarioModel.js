@@ -27,8 +27,26 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucao);
 }
 
+function curtir(idUsuario, idCulinaria) {
+    var instrucao = `
+        insert into curtidas values(${idUsuario}, ${idCulinaria}, 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function listarAcessos() {
+    var instrucao = `
+        select nome, count(fkCulinaria) as qtd from curtidas as curt join culinaria as culi on curt.fkCulinaria = culi.id group by culi.id ;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    curtir,
+    listarAcessos
 };

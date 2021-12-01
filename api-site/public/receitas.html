@@ -28,7 +28,7 @@
            </a>
 
            <a href="curiosidades.html">
-            <ul>Curiosidades</ul>
+            <ul>Historias</ul>
            </a>
 
            <a href="receitas.html">
@@ -49,7 +49,7 @@
    </div>
    <div class="imgCozinhando">
       
-      <div class="divEntrada">
+      <div class="divEntrada" onclick="mudar('receitaEntrada.html')">
          <div class="imgEntrada"></div>
          <span>Quer uma ideia do que servir na entrada do seu jantar?
             Venha conferir essa receita de bruschetta deliciosa.
@@ -57,28 +57,31 @@
       </div>
    </div>
   <div class="divReceitas">
-
-     <div class="carbonara">
-        <div class="imgCarbonara"></div>
+     
+   
+     <div class="carbonara" onclick="mudar('receitaCarbonara.html')">
+        <div onclick="mudar()" class="imgCarbonara"></div>
         <span>Quer aprender a fazer o verdadeiro carbonara?</span>
      </div>
 
-     <div class="pernilMexicano">
+       
+  
+     <div class="pernilMexicano" onclick="mudar('receitaPernil.html')">
         <div class="imgPernilMexicano"></div>
         <span>Quer aprender a fazer um pernil mexicano bem gostoso?</span>
      </div>
 
-     <div class="batataArgentina">
+     <div class="batataArgentina" onclick="mudar('receitaBatata.html')">
         <div class="imgBatataArgentina"></div>
         <span>Quer aprender a fazer a batata argentina? Uma forma diferente da batata recheada fazemos Brasil.</span>
      </div>
 
-     <div class="paoDeLo">
+     <div class="paoDeLo" onclick="mudar('receitaPaoDeLo.html')">
         <div class="imgPaoDelo"></div>
         <span>Quer aprender a fazer uma massa de pão de ló bem gostoso e fofinho? </span>
      </div>
 
-     <div class="tortaDeLimao">
+     <div class="tortaDeLimao" onclick="mudar('receitaTortaDeLimao.html')">
         <div class="imgTortaDeLimao"></div>
         <span>Quer aprender uma torta de limão?</span>
      </div>
@@ -105,3 +108,16 @@
 </footer>
 
    </body>
+
+   <script>
+         let botaoSair = document.querySelector(".botaoSair");
+   botaoSair.addEventListener("click", function() {
+      window.location = "index.html";
+   })
+
+   function mudar(link){
+
+   
+      window.location.href = link
+   }
+   </script>

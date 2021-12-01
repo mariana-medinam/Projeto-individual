@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MasterMari | 1 Quiz</title>
-    <link rel="stylesheet" href="./css/primeiroQuiz.css">
+    <title> MasterMari | 3 Quiz</title>
+    <link rel="stylesheet" href="./css/terceiro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
                     <ul>Quiz</ul>
                  </a>
                  <a href="curiosidades.html">
-                 <ul>Curiosidades</ul>
+                 <ul>Historias</ul>
                 </a>
                 <a href="receitas.html">
                  <ul>Receitas</ul>
@@ -46,12 +46,12 @@
 
         <div class="imgMacarrons">
            
-            <div class="primeiroQuiz">
-              <div class="imgPizza"></div>
-                <span>Você sabe o país de origem dessa comida?</span> <br> 
+            <div class="terceiroQuiz">
+              <div class="imgDoce"></div>
+                <div class="quizTitulo">Você consegue adivinhar qual é o doce?</span> <br> 
                 <button class="botaoQuiz" onclick="botaoQuiz()">Iniciar Quiz</button>
-                <div></div>
             </div>
+     </div>
      </div>
      <footer>
         <div class="informacoes">
@@ -71,6 +71,14 @@
 </html>
 
 <script>
+      let botaoSair = document.querySelector(".botaoSair");
+   botaoSair.addEventListener("click", function() {
+      window.location = "index.html";
+   })
+
+
+
+
    function botaoQuiz(){
 
    }

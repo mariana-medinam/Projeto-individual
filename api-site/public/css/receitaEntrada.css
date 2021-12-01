@@ -13,6 +13,7 @@ body {
     position: fixed;
     align-items: center;
     
+    
 }
 .divTitulo{
     width: 26%;
@@ -67,51 +68,47 @@ body {
 .textoBotao {
     margin-top: -8%;
 }
-.imgMacarrons{
-    background-image: url("https://cdn.pixabay.com/photo/2017/07/28/14/29/macarons-2548827_960_720.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 80vh;
-    padding: 40vh;
-}
-
-.primeiroQuiz{
-    background-color: #741111;
-    height: 80vh;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10%;
-    padding: 10px;
-    border-radius: 20px;
-}
-.imgPizza{
-    background-image: url("https://images.pexels.com/photos/4109085/pexels-photo-4109085.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-size: cover;
-    height: 65vh;
-    width: 100%;
-    border-radius: 20px;
-}
-.primeiroQuiz span{
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    font-size: 20px;
+.divEntrada,
+.receitaEntrada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
    
 }
-.primeiroQuiz .botaoQuiz{
-    background-color: #741111;
-    border: #fff solid 2px;
-    color: #fff;
-    width: 100%;
-    height: 8vh;
-    border-radius: 8px;
-    font-size: 40px;
-    font-family: 'Montserrat', sans-serif;
+.tituloEntrada span{
+    margin-top: 100px;
+    height: 10vh;
+    width: 30%;
+    font-size: 70px;
     font-family: 'Petemoss', cursive;
-    border-radius: 20px;
-    margin-top: 20px;
+    color: #741111;
+   
+    
+}
+.divEntrada .imgEntrada{
+    background-image: url("https://romanobier.com.br/wp-content/uploads/2021/08/bruschetta_parma.jpg");
+    width: 50%;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.receitaEntrada li{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    text-align: left;
+}
+
+
+.receitaBatata span{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+
 }
 
 .informacoes{
@@ -126,6 +123,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     
 }
+
 .socialMedias {
     list-style: none;
     display: flex;

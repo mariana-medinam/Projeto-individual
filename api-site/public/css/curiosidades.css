@@ -79,7 +79,6 @@ body {
     padding: 10px;
    margin-top: 5vh;
 }
-
 .chamadaCuriosidades span{
     color: #fff;
     font-family: 'Petemoss', cursive;
@@ -100,15 +99,23 @@ body {
 }
 .curiosidades{
     background-color: #741111;
-    height: 200vh;
+    height: 250vh;
     padding-top: 10%;
+}
+.curiosidades .tituloCuriosidades{
+    color: #fff;
+    font-family: 'Petemoss', cursive;
+    font-size: 70px;
+    margin-left: 30%;
+    margin-top: -10vh;
+   
 }
 .curiosidades .brigadeiro{
     background-color: #EDBE7A;
     width: 35%;
-    height: 80vh;
+    height: 95vh;
     border-radius: 30px;
-    margin-left: 5%; 
+    margin-left: 10%; 
     padding: 10px;
 }
 .curiosidades .imgBrigadeiro{
@@ -118,10 +125,68 @@ body {
     height: 55vh;
     width: 100%;
 }
+.curiosidades .pastel{
+    background-color: #EDBE7A;
+    width: 35%;
+    height: 95vh;
+    border-radius: 30px;
+    margin-top: -46%;
+    margin-left: 55%; 
+    padding: 10px;
+}
+.curiosidades .imgPastel{
+    background-image: url("https://static.cdn.pleno.news/2020/01/Pastel.jpg");
+    background-size: cover;
+    border-radius: 30px;
+    height: 55vh;
+    width: 100%;
+    padding-top: 5vh;
+}
+.curiosidades .paoDeQueijo{
+    background-color: #EDBE7A;
+    width: 35%;
+    height: 95vh;
+    border-radius: 30px;
+    margin-top: 10%;
+    margin-left: 10%; 
+    padding: 10px;
+}
+.curiosidades .seculo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.paoDeQueijo .imgPaoQueijo{
+    background-image: url("https://static.clubedaanamariabraga.com.br/wp-content/uploads/2020/02/pao-de-queijo-mineiro-de-familia.jpg");
+    background-size: cover;
+    border-radius: 30px;
+    height: 55vh;
+    width: 100%;
+    padding-top: 5vh;
+}
+.curiosidades .pudim{
+    background-color: #EDBE7A;
+    width: 35%;
+    height: 95vh;
+    border-radius: 30px;
+    margin-top: -45%;
+    margin-left: 55%; 
+    padding: 10px;
+}
+.curiosidades .imgPudim{
+    background-image: url("https://s2.glbimg.com/0IW9eAlr8zqyY3WD1CIh5trjuSg=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/t/2/dpV1FkS4WByGHfml8S1w/pudim.jpg");
+    background-size: cover;
+    border-radius: 30px;
+    height: 55vh;
+    width: 100%;
+    padding-top: 5vh;
+}
 .curiosidades span{
     color: #000;
+    font-family: 'Montserrat', sans-serif;
     font-family: 'Petemoss', cursive;
-    font-size: 30px;
+    font-size: 28px;
+ 
+  
 }
 .imgDoceDois{
     background-image: url("https://images.pexels.com/photos/3026810/pexels-photo-3026810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");

@@ -76,7 +76,7 @@ body {
     padding: 40vh;
 }
 
-.primeiroQuiz{
+.SegundoQuiz{
     background-color: #741111;
     height: 80vh;
     width: 70%;
@@ -86,21 +86,21 @@ body {
     padding: 10px;
     border-radius: 20px;
 }
-.imgPizza{
-    background-image: url("https://images.pexels.com/photos/4109085/pexels-photo-4109085.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+.imgSushi{
+    background-image: url("https://images.pexels.com/photos/7474171/pexels-photo-7474171.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
     background-size: cover;
     height: 65vh;
     width: 100%;
     border-radius: 20px;
 }
-.primeiroQuiz span{
+.SegundoQuiz span{
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     font-size: 20px;
    
 }
-.primeiroQuiz .botaoQuiz{
+.SegundoQuiz .botaoQuiz{
     background-color: #741111;
     border: #fff solid 2px;
     color: #fff;
@@ -108,10 +108,10 @@ body {
     height: 8vh;
     border-radius: 8px;
     font-size: 40px;
+    margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Petemoss', cursive;
     border-radius: 20px;
-    margin-top: 20px;
 }
 
 .informacoes{

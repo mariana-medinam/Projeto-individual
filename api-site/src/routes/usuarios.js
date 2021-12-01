@@ -19,4 +19,13 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/curtir", function (req, res) {
+    usuarioController.curtir(req, res);
+});
+
+router.get("/listarAcessos", function (req, res) {
+    usuarioController.listarAcessos(req, res);
+});
+
+
 module.exports = router;

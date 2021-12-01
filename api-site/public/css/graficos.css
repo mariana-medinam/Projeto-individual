@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0; 
 }
+
 .menu{
     height: 15vh;
     width: 100%;
@@ -12,6 +13,7 @@ body {
     display: flex;
     position: fixed;
     align-items: center;
+  
     
 }
 .divTitulo{
@@ -59,6 +61,7 @@ body {
     font-family: 'Petemoss', cursive;
     font-size: 33px;
     transition: 0.5s;
+    cursor: pointer;
 }
 .botaoSair:hover{
     width: 11%;
@@ -66,4 +69,94 @@ body {
 }
 .textoBotao {
     margin-top: -8%;
+}
+.titulo span{
+    margin-left: 30%;
+    width: 26%;
+    font-size: 70px;
+   text-align: center;
+   color: #741111;
+   font-family: 'Petemoss', cursive;
+}
+
+.titulo .textoGrafico{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 29%;
+}
+.graph{
+    padding-top: 30px; 
+    height: 350px;
+    width: 100%;
+}
+.gridContainer{
+    padding-top: 5vh;
+   display: grid;
+   grid-template-columns: 350px 350px 350px;
+   grid-template-rows: 300px 300px;
+   grid-gap: 3%;
+   margin-left: 8vw;
+}
+.divTotal{
+    margin-top: 5%;
+    margin-left: 1%;
+}
+.gridCards{
+    background-color: #EDBE7A;
+    border: 2px solid #741111;
+    padding: 10px;
+    border-radius: 20px; 
+}
+.gridCards .imgJaponesa{
+    background-image: url("https://images.pexels.com/photos/3763799/pexels-photo-3763799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    width: 100%;
+    height: 42vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.gridCards span{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 2%;
+}
+
+.gridCards .imgFrancesa{
+    background-image: url("https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    width: 100%;
+    height: 42vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.gridCards .imgBrasileira{
+    background-image: url("https://cdn.awsli.com.br/600x450/1420/1420494/produto/90203937/273bd9bafa.jpg");
+    width: 100%;
+    height: 42vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.gridCards .imgMexicana{
+    background-image: url("https://images.pexels.com/photos/7388096/pexels-photo-7388096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    width: 100%;
+    height: 42vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+
+.gridCards .imgItaliana{
+    background-image: url("https://images.pexels.com/photos/6659612/pexels-photo-6659612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    width: 100%;
+    height: 42vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.gridCards .imgArabe{
+    background-image: url("https://catracalivre.com.br/wp-content/uploads/sites/8/2016/10/habibs-2.jpg");
+    width: 100%;
+    height: 42vh;
+    border-radius: 20px;
+    background-size: cover; 
 }

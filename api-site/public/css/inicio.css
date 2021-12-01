@@ -82,6 +82,7 @@ a{
     background-size: cover;
     background-repeat: no-repeat;
     height: 130vh;
+    width: 100%;
 }
 .containerQuizReceitaSobre{
     margin-left: 8%;
@@ -121,7 +122,7 @@ a{
 .containerCuriosidadeGraficoChamarUsuario{
     margin-left: 60%;
     margin-top: -49%;
-    width: 80%;
+    width: 100%;
 }
 .curiosidades{
     background-color: #EDBE7A;

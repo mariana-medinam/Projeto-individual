@@ -1,50 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasterMari | Gráficos</title>
-    <link rel="stylesheet" href="./css/graficos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Petemoss&display=swap" rel="stylesheet">
-<link rel="icon" href="https://cdn-icons.flaticon.com/png/512/3726/premium/3726102.png?token=exp=1636819043~hmac=f3f916d7ff15e10e6d0fef2b1058706e">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MasterMari | Gráficos</title>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <link rel="stylesheet" href="./css/graficos.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Petemoss&display=swap"
+      rel="stylesheet">
+   <link rel="icon"
+      href="https://cdn-icons.flaticon.com/png/512/3726/premium/3726102.png?token=exp=1636819043~hmac=f3f916d7ff15e10e6d0fef2b1058706e">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
+
 <body>
-   <div class="imgCamarao">
-      <div class="menu">
-         <div class="divTitulo">
-            MasterMari
-         </div>
-         <div class="container">
-            <li>
-             
-               <a href="quiz.html">
-                  <ul>Quiz</ul>
-                 </a>
-   
-                  <a href="graficos.html">
-                  <ul>Curiosidades</ul>
-                  </a>
-   
-                  <a href="receitas.html">
-                  <ul>Receitas</ul>
-                  </a>
-   
-                  <a href="sobre.html">
-                  <ul>Sobre</ul>
-                  </a>
-   
-                  <a href="graficos.html">
-                  <ul>Gráficos</ul>
-                  </a>
-            </li>
-            <button class="botaoSair"><div class="textoBotao">Sair</div></button>
-         </div>
+   <div class="menu">
+      <div class="divTitulo">
+         MasterMari
+      </div>
+      <div class="container">
+         <li>
+
+            <a href="quiz.html">
+               <ul>Quiz</ul>
+            </a>
+
+            <a href="curiosidades.html">
+               <ul>Historias</ul>
+            </a>
+
+            <a href="receitas.html">
+               <ul>Receitas</ul>
+            </a>
+
+            <a href="sobre.html">
+               <ul>Sobre</ul>
+            </a>
+
+            <a href="graficos.html">
+               <ul>Gráficos</ul>
+            </a>
+         </li>
+         <button class="botaoSair">
+            <div class="textoBotao">Sair</div>
+         </button>
       </div>
    </div>
+   <br><br><br><br><br><br><br><br><br>
+
+   <div class="titulo">
+      <span>Vote aqui na sua Cúlinaria favorita</span> <br> <br>
+      <span class="textoGrafico">Veja no nosso gráfico, qual tipo de cúlinaria que os úsuarios também gostam</span>
+   </div>
+
+   <div class="gridContainer">
+
+      <div class="gridCards japonesa" onclick="curtir(1)">
+         <div class="imgJaponesa"></div>
+         <span>Cúlinaria Japonesa</span>
+      </div>
+
+      <div class="gridCards francesa" onclick="curtir(2)">
+         <div class="imgFrancesa"></div>
+         <span> Cúlinaria Francesa</span>
+      </div>
+
+      <div class="gridCards brasileira" onclick="curtir(3)">
+         <div class="imgBrasileira"></div>
+         <span>Cúlinaria Brasileira</span>
+      </div>
+      <div class="gridCards mexicana" onclick="curtir(4)">
+         <div class="imgMexicana"></div>
+         <span>Cúlinaria Mexicana</span>
+      </div>
+
+      <div class="gridCards italiana" onclick="curtir(5)">
+         <div class="imgItaliana"></div>
+         <span>Cúlinaria Italiana</span>
+      </div>
+      <div class="gridCards arabe" onclick="curtir(6)">
+         <div class="imgArabe"></div>
+         <span>Cúlinaria Àrabe</span>
+      </div>  
+   </div>
+   <div id="divTotal" class="divTotal">
+   </div>
+
+   <div class="graph">
+      <canvas id="myChart" style="width: 100%; height: 100%"></canvas>
+   </div>
+
+</body>
+<script>
+
+   fetch('/usuarios/listarAcessos').then(function (resposta) {
+      resposta.json().then(function (json) {
+         
+         var labels = [];
+         var data = [];
+
+         var total = 0;
+         for (var i = 0; i < json.length; i++) {
+            labels.push(json[i].nome);
+            data.push(json[i].qtd);
+            total += json[i].qtd;
+         }
+
+         divTotal.innerHTML = `
+               
+            <span>Total dos Votos: ${total}</span>
+         `
+
+         grafico(labels, data)
+      })
+   })
+
+   function grafico(labels, data) {
+      const config = {
+         type: "bar",
+         data: {
+            labels: labels,
+            datasets: [
+               {
+                  label: "Tipo Culinária",
+                  data: data,
+                  backgroundColor: "#741111",
+                  borderColor: "#3F51B5"
+               }
+            ]
+         },
+         options: {
+            maintainAspectRatio: false
+         }
+      }
+      const myChartLine = new Chart(document.getElementById("myChart"), config);
+   }
+   //funcao para fazer o botao sair voltar para o index
+   let botaoSair = document.querySelector(".botaoSair");
+   botaoSair.addEventListener("click", function () {
+      window.location = "index.html";
+   })
+
+   function curtir(idCulinaria) {
+      fetch("/usuarios/curtir", {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json"
+         },
+         body: JSON.stringify({
+            idUsuario: sessionStorage.ID_USUARIO,
+            idCulinaria: idCulinaria,
+         })
+      }).then(function (resposta) {
+         alert('Curtiu essa culinária!');
+      });
+
+   }
+
+
+</script>

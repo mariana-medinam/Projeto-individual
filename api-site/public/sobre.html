@@ -29,7 +29,7 @@
                  </a>
    
                   <a href="curiosidades.html">
-                  <ul>Curiosidades</ul>
+                  <ul>Historias</ul>
                   </a>
    
                   <a href="receitas.html">
@@ -57,17 +57,26 @@
    </div>
 
    <div class="sobreMim">
-      <img src="">
-      <span>Sobre Mim</span>
+      <div class="minhasFotos">
+        <img class="selected" src="./imagem/marianaPequenaCozinhando.jpeg">
+        <img class="selected" src="./imagem/marianaNoRestauranteJacquin.jpeg">
+        <img class="selected" src="./imagem/daniloMarianaÇava.jpeg">
+        <img class="selected" src="./imagem/pratoDaniloÇava.jpeg">
+        <img class="selected" src="./imagem/pratoMarianaÇava.jpeg">
+        <img class="selected" src="./imagem/marianaEFogaça.jpeg">
+      </div>
 
-      <p>Minha historia na gastronomia começou desde pequena, quando as crianças normais estavam acordando  cedo para brincar ou ver algum desenho na TV, mas eu estava lá assistindo Ana Maria Braga com o  meu irmão mais velho (outro grande fã da gastronomia). Num certo episódio, Ana Maria fez um  lindo brigadeirão que fez meus olhos brilharem. Fiquei com muita vontade de comer, e minha mãe   me ajudou a cozinhar, uma vez que eu era muito pequena para fazer sozinha (deveria ter uns 6 anos). Foi então que eu percebi o quanto eu gostava da cozinha. Eu ficava super ansiosa e animada com os trabalhos de escola que tinham que  levar comida e me dedicava intensamente a eles.  Minha maior felicidade era quando não sobrava nada do prato que eu tinha levado  e todos falavam que amaram e que eu deveria fazer de novo. </p>
+      <div class="textoContainer">   
+         <span>Sobre Mim</span>
 
-      <p>Como minha mãe não gostava de cozinhar, fazia comidas ruins propositalmente para que eu e meu irmão aprendessemos a fazer nossas próprias refeições e não dependessemos mais dela. Com o tempo, comecei a me tornar responsável pela cozinha na minha casa, o que me levou a ver mais receitas, assistir muitos programas de culinária e ler muito na internet sobre o assunto. Tudo isso me ensinou que comida não é só para tirar a fome, mas para nos proporcionar emoções, prazeres, e para conhecermos a historia e a cultura de um país. E, principalmente, que para cozinhar você precisa de respeito ao alimento, amor, dedicação, paciência e organização, valores que tento levar comigo para todos os campos da minha vida.</p>
+         <p>Minha historia na gastronomia começou desde pequena, quando as crianças normais estavam acordando  cedo para brincar ou ver algum desenho na TV, mas eu estava lá assistindo Ana Maria Braga com o  meu irmão mais velho (outro grande fã da gastronomia). Num certo episódio, Ana Maria fez um  lindo brigadeirão que fez meus olhos brilharem. Fiquei com muita vontade de comer, e minha mãe   me ajudou a cozinhar, uma vez que eu era muito pequena para fazer sozinha (deveria ter uns 6 anos). Foi então que eu percebi o quanto eu gostava da cozinha. Eu ficava super ansiosa e animada com os trabalhos de escola que tinham que  levar comida e me dedicava intensamente a eles.  Minha maior felicidade era quando não sobrava nada do prato que eu tinha levado  e todos falavam que amaram e que eu deveria fazer de novo. </p>
 
-      <p>Sempre tive o sonho de conhecer os jurados do reality MasterChef e seus grandes e conceituados restaurantes, sonho este que pude começar a realizar esse ano, quando meu namorado me levou ao restaurante do chefe Jacquin, Ça-Va, como presente de 3 anos de namoro. </p>
+         <p>Como minha mãe não gostava de cozinhar, fazia comidas ruins propositalmente para que eu e meu irmão aprendessemos a fazer nossas próprias refeições e não dependessemos mais dela. Com o tempo, comecei a me tornar responsável pela cozinha na minha casa, o que me levou a ver mais receitas, assistir muitos programas de culinária e ler muito na internet sobre o assunto. Tudo isso me ensinou que comida não é só para tirar a fome, mas para nos proporcionar emoções, prazeres, e para conhecermos a historia e a cultura de um país. E, principalmente, que para cozinhar você precisa de respeito ao alimento, amor, dedicação, paciência e organização, valores que tento levar comigo para todos os campos da minha vida.</p>
 
-      <p> Sei que esse amor pela gastronomia é algo que vou levar comigo pelo resto da minha vida, e que terei a oportunidade de realizar todos os desejos que a Mariana de 6 anos sempre sonhou.</p>
+         <p>Sempre tive o sonho de conhecer os jurados do reality MasterChef e seus grandes e conceituados restaurantes, sonho este que pude começar a realizar esse ano, quando meu namorado me levou ao restaurante do chefe Jacquin, Ça-Va, como presente de 3 anos de namoro. </p>
 
+         <p> Sei que esse amor pela gastronomia é algo que vou levar comigo pelo resto da minha vida, e que terei a oportunidade de realizar todos os desejos que a Mariana de 6 anos sempre sonhou.</p>
+      </div>
 
    </div>
 
@@ -136,4 +145,36 @@
          </ul>
      </div>
    </footer>
+
+   <script>
+         let botaoSair = document.querySelector(".botaoSair");
+   botaoSair.addEventListener("click", function() {
+      window.location = "index.html";
+   })
+
+     let time = 1000
+      currentImageIndex = 0
+      imagens = document.querySelectorAll(".minhasFotos img");
+      max = imagens.length;
+
+
+   function nextImagem() {
+      currentImageIndex++
+        
+      imagens[currentImageIndex].classList.remove("selected")
+      if(currentImageIndex >= max) {
+         currentImageIndex = 0
+      }
+
+      imagens[currentImageIndex].classList.add("selected")
+   }
+
+   function start() {
+      setInterval(() => {
+         nextImagem()
+      }, time)
+   }
+   window.addEventListener("load", start())
+
+   </script>
 

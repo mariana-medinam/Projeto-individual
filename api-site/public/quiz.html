@@ -28,7 +28,7 @@
                   <ul>Quiz</ul>
                </a>
                <a href="curiosidades.html">
-               <ul>Curiosidades</ul>
+               <ul>Historias</ul>
               </a>
               <a href="receitas.html">
                <ul>Receitas</ul>
@@ -39,25 +39,26 @@
             <a href="graficos.html">
                <ul>Gráficos</ul>
             </a>
-            </li>
-            <button class="botaoSair"><div class="textoBotao">Sair</div></button>
+            </li> 
+            <button onclick="botaoSair()" class="botaoSair"><div class="textoBotao">Sair</div></button>
+         
          </div>
       </div>
    </div>
   <div class="divQuiz">
      
-      <a href="../html/primeiroQuiz.html">
-     <div class="quizPaisOrigem">
-        <div class="imgPizza" ></div>
-        <span >Você sabe o país de origem dessa comida?</span>
-     </div>
-   </a>
-     <div class="tudoSobreCulinaria">
-        <div class="imgJapones"></div>
-        <span> Será que você tudo sobre culinária?</span>
-     </div>
+      <div class="quizPaisOrigem" onclick="quiz('paisDeOrigem.html')">
+         <div class="imgPizza"></div>
+         <span >Você sabe o país de origem dessa comida?</span>
+      </div>
 
-     <div class="quizDoce">
+     <div class="tudoSobreCulinaria" onclick="quiz('segundoQuiz.html')">
+        <div class="imgJapones"></div>
+        <span> Será que você sabe tudo sobre culinária?</span>
+      </div>
+   
+
+     <div class="quizDoce" onclick="quiz('terceiroQuiz.html')">
         <div class="imgDoce"></div>
         <span>Você consegue adivinhar qual é o doce?</span>
      </div>
@@ -77,3 +78,15 @@
    </div>
 </footer>
    </body>
+
+   <script>
+         let botaoSair = document.querySelector(".botaoSair");
+   botaoSair.addEventListener("click", function() {
+      window.location = "index.html";
+   })
+
+   function quiz(link){
+      window.location.href = link
+   }
+
+   </script>
