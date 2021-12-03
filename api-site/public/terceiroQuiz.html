@@ -46,11 +46,84 @@
 
         <div class="imgMacarrons">
            
-            <div class="terceiroQuiz">
+            <div id="terceiroQuiz" class="terceiroQuiz">
               <div class="imgDoce"></div>
                 <div class="quizTitulo">Você consegue adivinhar qual é o doce?</span> <br> 
                 <button class="botaoQuiz" onclick="botaoQuiz()">Iniciar Quiz</button>
             </div>
+
+
+            <div id="pg1" style="display: none;" class="todasPergunta">
+
+               <div class="imgMacarrons2"></div>
+               <span>Você sabe o nome desse doce?</span> <br> <br>
+               <button id="botoes" onclick="pontos('resposta 1','resposta 2', '1', 'pg1', 'pg2')">Tiramisú</button>
+               <button id="botoes" onclick="pontos('resposta 2','resposta 2', '1', 'pg1', 'pg2')">Macorrons</button>
+               <button id="botoes" onclick="pontos('resposta 3', 'resposta 2', '1', 'pg1', 'pg2')">Pannacotta</button>
+            </div>
+            <div id="pg2" style="display: none;" class="todasPergunta">
+      
+               <div class="imgProfiteroles"></div>
+               <span>Você sabe o nome desse doce?</span> <br> <br>
+               <button id="botoes" onclick="pontos('resposta 1','resposta 1', '2', 'pg2', 'pg3')">Profiteroles</button>
+               <button id="botoes" onclick="pontos('resposta 2','resposta 1', '2', 'pg2', 'pg3')">Pão De Ló</button>
+               <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '2', 'pg2', 'pg3')">Bolos</button>
+            </div>
+      
+            <div id="pg3" style="display: none;" class="todasPergunta">
+      
+               <div class="imgPetitGateau"></div>
+               <span>Você sabe o nome desse doce? </span> <br> <br>
+               <button id="botoes" onclick="pontos('resposta 1','resposta 3', '3', 'pg3', 'pg4')">Capcakes</button>
+               <button id="botoes" onclick="pontos('resposta 2','resposta 3', '3', 'pg3', 'pg4')">Bolos</button>
+               <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '3', 'pg3', 'pg4')">Petit Gateau</button>
+            </div>
+      
+            <div id="pg4" style="display: none;" class="todasPergunta">
+      
+               <div class="imgCheesecake"></div>
+               <span>Você sabe o nome desse doce? </span> <br> <br>
+               <button id="botoes" onclick="pontos('resposta 1','resposta 1', '4', 'pg4', 'pg5')">CheeseCake</button>
+               <button id="botoes" onclick="pontos('resposta 2','resposta 1', '4', 'pg4', 'pg5')">Medeleines</button>
+               <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '4', 'pg4', 'pg5')">torta De Banana</button>
+            </div>
+      
+            <div id="pg5" style="display: none;" class="todasPergunta">
+      
+               <div class="imgPalova"></div>
+               <span>Você sabe o nome desse doce? </span> <br> <br>
+               <button id="botoes" onclick="pontos('resposta 1','resposta 3', '5', 'pg5', 'pg6')">Torta de Holandesa</button>
+               <button id="botoes" onclick="pontos('resposta 2','resposta 3', '5', 'pg5', 'pg6')">Torta de maça</button>
+               <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '5', 'pg5', 'pg6')">Palova</button>
+            </div>
+      
+            <div id="pg6" style="display: none;" class="todasPergunta">
+      
+               <div class="imgCremeBrulee"></div>
+               <span>Você sabe o nome desse doce? </span> <br> <br>
+               <button id="botoes" onclick="pontos('resposta 1','resposta 1', '6', 'pg6', 'pg7')">Créme Brûlée</button>
+               <button id="botoes" onclick="pontos('resposta 2','resposta 1', '6', 'pg6', 'pg7')">Musse</button>
+               <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '6', 'pg6', 'pg7')">Pannacotta</button>
+            </div>
+
+            <div id="pg7" style="display: none;" class="todasPergunta">
+      
+               <div class="imgTiramisu"></div>
+               <span>Você sabe o nome desse doce? </span> <br> <br>
+               <button id="botoes" onclick="pontos('resposta 1','resposta 1', '6', 'pg7', 'pg8')">Tiramusu</button>
+               <button id="botoes" onclick="pontos('resposta 2','resposta 1', '6', 'pg7', 'pg8')">Torta Holandesa</button>
+               <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '6', 'pg7', 'pg8')">Torta de chocolate</button>
+            </div>
+
+      
+            <div id="resposta"></div>
+            <div id="btn_next">
+      
+            </div>
+
+
+
+
      </div>
      </div>
      <footer>
@@ -76,6 +149,60 @@
       window.location = "index.html";
    })
 
+   function botaoQuiz() {
+     terceiroQuiz.style.display ='none'
+     pg1.style.display = 'block'
+     
+  }
+
+   var pontuacao = 0;
+    var nivel = [];
+
+    function pontos(respostaBotao, respostaCerta, nivelAtual, tirar, exibir) {
+
+        if (respostaBotao == respostaCerta) {
+            pontuacao = pontuacao + 10;
+            resposta.innerHTML = `
+                    oba!!! vocÊ acertou!!
+                    resposta correta: ${respostaCerta} <br>
+                    pontos: ${pontuacao}
+                `;
+            console.log("ta indo")
+        } else {
+            resposta.innerHTML = `
+                    que pena, vocÊ errou <br>
+                    resposta correta: ${respostaCerta}; <br> 
+                        pontos: ${pontuacao}
+
+                `;
+            console.log("ta indo")
+        }
+
+        // botoes.disabled = true; -- depois você tenta arrumar isso que eu não tô conseguindo, para ele não poder mudar de resposta
+
+        nextNivel = nivelAtual
+        paraIr = exibir;
+        paraTirar = tirar;
+
+
+        nivel.push(nivelAtual);
+        btn_next.innerHTML = `
+            <button class= "botaoProximo" onclick="proximo('${nextNivel}', '${paraTirar}', '${paraIr}')">Proximo</button>
+            `
+    }
+
+
+    function proximo(nivelAtual, atual, proximo) {
+        verificar = nivel.length;
+
+        if (nivelAtual == verificar) {
+            document.getElementById(atual).style.display = "none";
+            document.getElementById(proximo).style.display = "block";
+
+        } else {
+            alert("você não respondeu o anterior")
+        }
+    }
 
 
 

@@ -68,17 +68,14 @@ body {
 .textoBotao {
     margin-top: -8%;
 }
-.divReceitaTortaDeLimao,
-.receitaTortaDeLimao{
+.divReceitaCarolina,
+.receitaCaolina{
     display: flex;
     flex-direction: column;
     align-items: center;
    
 }
-.divReceitaTortaDeLimao h3{
-    align-items: center;
-}
-.tituloTortaDeLimao span{
+.tituloCarolina span{
     margin-top: 100px;
     height: 10vh;
     width: 30%;
@@ -88,8 +85,8 @@ body {
    
     
 }
-.divReceitaTortaDeLimao .imgTortaDeLimao{
-    background-image: url("https://d1uz88p17r663j.cloudfront.net/resized/40b25559b85b265e885f55ec7c1e4d04_torta-lim%C3%A3o-receitas-nestle_1200_600.jpg");
+.divReceitaCarolina .imgCarolina{
+    background-image: url("https://cdn.levty.com/camil/prd/imagem_uniao/carolinas_recheadas_de_doce_de_leite_v1/carolinas_recheadas_de_doce_de_leite_v1_baixa_.jpg");
     width: 50%;
     height: 75vh;
     background-size: cover;
@@ -97,7 +94,7 @@ body {
     
 }
 
-.receitaTortaDeLimao li{
+.receitaCarolina li{
     color: #000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -106,7 +103,7 @@ body {
 }
 
 
-.receitaTortaDeLimao span{
+.receitaCarolina span{
     color: #000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;

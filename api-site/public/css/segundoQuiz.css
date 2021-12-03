@@ -113,6 +113,79 @@ body {
     font-family: 'Petemoss', cursive;
     border-radius: 20px;
 }
+.todasPergunta{
+    background-color: #741111;
+    height: 80vh;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+    padding: 10px;
+    border-radius: 20px; 
+}
+
+.imgMacarrao{
+    background-image: url("https://liberal.com.br/wp-content/uploads/2020/10/domingo-macarr%C3%A3o.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+}
+.imgFrutas{
+    background-image: url("https://images.pexels.com/photos/3252766/pexels-photo-3252766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+}
+.imgAlimentoMais{
+    background-image: url("http://i.mlcdn.com.br/portaldalu/fotosconteudo/43344_01.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgAliSaudavel{
+    background-image: url("https://ichef.bbci.co.uk/news/640/cpsprodpb/89E2/production/_106589253_amino.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgCarne{
+    background-image: url("https://www.sociedadedacarne.com.br/blog/wp-content/uploads/2019/01/shutterstock_1219554790-1.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgBrasil{
+    background-image: url("https://www.maxmilhas.com.br/blog/wp-content/uploads/2019/11/comida-mineira.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+
+#botoes{
+   background-color: #741111;
+   color: #fff;
+   font-family: 'Montserrat', sans-serif;
+   border: #fff 2px solid;
+   border-radius: 8px;
+   width: 100%;
+   
+}
+#botoes:hover{
+    width: 102%;
+}
+
+.todasPergunta span{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
 
 .informacoes{
     background-color: #741111;

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/teste.css">
+    <style>
+        #pg2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pg1">
+        nivel 1
+        <div class="imgBacalhoada" ></div>
+        <span>De onde vem Bacalhoada?</span>
+        <button id="botoes" onclick="pontos('resposta 1','resposta 2', '1', 'pg1', 'pg2')">Espanha</button>
+        <button id="botoes" onclick="pontos('resposta 2','resposta 2', '1', 'pg1', 'pg2')">Porgutal</button>
+        <button id="botoes" onclick="pontos('resposta 3', 'resposta 2', '1', 'pg1', 'pg2')">Inglaterra</button>
+    </div>
+    <div id="pg2" style="display: none;">
+        nivel 2
+        <div class="imgFrangoXadrez" ></div>
+        <span>De onde vem Frango Xadrez?</span>
+        <button id="botoes" onclick="pontos('resposta 1','resposta 1', '2', 'pg2', 'pg3')">Japão</button>
+        <button id="botoes" onclick="pontos('resposta 2','resposta 1', '2', 'pg2', 'pg3')">China</button>
+        <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '2', 'pg2', 'pg3')">Carreia do Sul</button>
+    </div>
+
+    <div id="pg3" style="display: none;">
+        nivel 3
+        <div class="imgEmpanada" ></div>
+        <span>De onde vem Empanada? </span>
+        <button id="botoes" onclick="pontos('resposta 1','resposta 3', '3', 'pg3', 'pg4')">Chile</button>
+        <button id="botoes" onclick="pontos('resposta 2','resposta 3', '3', 'pg3', 'pg4')">Espanha</button>
+        <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '3', 'pg3', 'pg4')">Argentina</button>
+    </div>
+
+    <div id="pg4" style="display: none;">
+        nivel 4
+        <div class="imgLasanha" style="display: none;"></div>
+        <span>De onde vem a Lasanha? </span>
+        <button id="botoes" onclick="pontos('resposta 1','resposta 1', '4', 'pg4', 'pg5')">Itália</button>
+        <button id="botoes" onclick="pontos('resposta 2','resposta 1', '4', 'pg4', 'pg5')">França</button>
+        <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '4', 'pg4', 'pg5')">Porgutal</button>
+    </div>
+
+    <div id="pg5" style="display: none;">
+        nivel 5
+        <div class="imgFondue"></div>
+        <span>De onde vem o Fondue de Queijo? </span>
+        <button id="botoes" onclick="pontos('resposta 1','resposta 3', '5', 'pg5', 'pg6')">Suiça</button>
+        <button id="botoes" onclick="pontos('resposta 2','resposta 3', '5', 'pg5', 'pg6')">França</button>
+        <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '5', 'pg5', 'pg6')">Itália</button>
+    </div>
+
+    <div id="pg6" style="display: none;">
+        nivel 6
+        <div class="imgStrogonoff" ></div>
+        <span>De onde vem o Strogonoff? </span>
+        <button id="botoes" onclick="pontos('resposta 1','resposta 1', '6', 'pg6', 'pg7')">Rússia</button>
+        <button id="botoes" onclick="pontos('resposta 2','resposta 1', '6', 'pg6', 'pg7')">Brasil</button>
+        <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '6', 'pg6', 'pg7')">França</button>
+    </div>
+
+    <div id="pg7" style="display: none;">
+        nivel 6
+        <div class="imgPaella"></div>
+        <span>De onde vem a Paella? </span>
+        <button id="botoes" onclick="pontos('resposta 1','resposta 3', '7', 'pg6', 'pg8')">Argentina</button>
+        <button id="botoes" onclick="pontos('resposta 2','resposta 3', '7', 'pg6', 'pg8')">Portugal</button>
+        <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '7', 'pg6', 'pg8')">Espanha</button>
+    </div>
+    </div>
+    <div id="resposta"></div>
+    <div id="btn_next">
+    </div>
+</body>
+
+</html>
+
+<script>
+    var pontuacao = 0;
+    var nivel = [];
+
+    function pontos(respostaBotao, respostaCerta, nivelAtual, tirar, exibir) {
+
+        if (respostaBotao == respostaCerta) {
+            pontuacao = pontuacao + 10;
+            resposta.innerHTML = `
+                    oba!!! vocÊ acertou!!
+                    resposta correta: ${respostaCerta} <br>
+                    pontos: ${pontuacao}
+                `;
+            console.log("ta indo")
+        } else {
+            resposta.innerHTML = `
+                    que pena, vocÊ errou <br>
+                    resposta correta: ${respostaCerta}; <br> 
+                        pontos: ${pontuacao}
+
+                `;
+            console.log("ta indo")
+        }
+
+        // botoes.disabled = true; -- depois você tenta arrumar isso que eu não tô conseguindo, para ele não poder mudar de resposta
+
+        nextNivel = nivelAtual
+        paraIr = exibir;
+        paraTirar = tirar;
+
+
+        nivel.push(nivelAtual);
+        btn_next.innerHTML = `
+            <button onclick="proximo('${nextNivel}', '${paraTirar}', '${paraIr}')">Proximo</button>
+            `
+    }
+
+
+    function proximo(nivelAtual, atual, proximo) {
+        verificar = nivel.length;
+
+        if (nivelAtual == verificar) {
+            document.getElementById(atual).style.display = "none";
+            document.getElementById(proximo).style.display = "block";
+
+        } else {
+            alert("você não respondeu o anterior")
+        }
+    }
+</script>

@@ -115,6 +115,65 @@ body {
     border-radius: 20px;
 }
 
+
+.imgMacarrons2{
+    background-image: url("https://vivareceita-cdn.s3.amazonaws.com/uploads/2021/09/Aprenda-receitas-de-macarons-em-casa.-Fonte-Pixabay-500x500.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+}
+.imgProfiteroles{
+    background-image: url("https://www.seriouseats.com/thmb/VMipiifTJhutCAXdMjpriBDbQbk=/1500x1125/filters:fill(auto,1)/20210609-profiteroles-debbie-wee-seriouseats-17-b1ac56cd654549bc896307e919b26edc.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+}
+.imgPetitGateau{
+    background-image: url("https://s2.glbimg.com/nVITzIxbO-YXR2TQ4f3YguOJQrk=/696x390/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/y/S/hAEF8hShupx3YgwPrDiw/petit-gateau-de-chocolate-com-sorvete.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgCheesecake{
+    background-image: url("https://www.oficinadeinverno.com.br/blog/wp-content/uploads/2015/03/gluten-free-new-york-cheesecake-1450985-hero-01-dc54f9daf38044238b495c7cefc191fa-1024x683.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgCarne{
+    background-image: url("https://www.sociedadedacarne.com.br/blog/wp-content/uploads/2019/01/shutterstock_1219554790-1.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgPalova{
+    background-image: url("https://lh3.googleusercontent.com/proxy/ywdavti2btujmOzvMRCiEpq2Y5XEnLdnjNX9OBuizAYh-buiRXy4EMRWwxwO8Tg6prS13Q6rH-Bel4r198Id5Xfd31WKaXL9zodXdHFt-j__jJ8DLrn6I6zbzudODnQjRo_9YWkRlgCATF8Vy6AFW3dyeGoccAWJrsNfR78Z4aUaQ8gxbi_UxXs");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgCremeBrulee{
+    background-image: url("https://static.clubedaanamariabraga.com.br/wp-content/uploads/2017/10/creme-brulee-tradicional.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+ }
+ .imgTiramisu{
+    background-image: url("https://img.itdg.com.br/tdg/images/recipes/000/086/691/332009/332009_original.jpg?w=1200");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+ }
+
+
 .informacoes{
     background-color: #741111;
     height: 30vh;

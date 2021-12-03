@@ -1,86 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MasterMari | 2 Quiz</title>
-    <link rel="stylesheet" href="./css/segundoQuiz.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Petemoss&display=swap" rel="stylesheet">
-<link rel="icon" href="https://cdn-icons.flaticon.com/png/512/3726/premium/3726102.png?token=exp=1636819043~hmac=f3f916d7ff15e10e6d0fef2b1058706e">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-</head>
-<body>
-   
-        <div class="menu">
-           <div class="divTitulo">
-              MasterMari
-           </div>
-           <div class="container">
-              <li>
-                 
-                 <a href="quiz.html">
-                    <ul>Quiz</ul>
-                 </a>
-                 <a href="curiosidades.html">
-                 <ul>Historias</ul>
-                </a>
-                <a href="receitas.html">
-                 <ul>Receitas</ul>
-               </a>
-               <a href="sobre.html">
-                 <ul>Sobre</ul>
-              </a>
-              <a href="graficos.html">
-                 <ul>Gráficos</ul>
-              </a>
-              </li>
-              <button class="botaoSair"><div class="textoBotao">Sair</div></button>
-           </div>
-        </div>
 
-        <div class="imgMacarrons">
-           
-            <div class="SegundoQuiz">
-              <div class="imgSushi"></div>
-                <span>Será que você sabe tudo sobre culinária?</span> <br> 
-                <button class="botaoQuiz" onclick="botaoQuiz()">Iniciar Quiz</button>
-                <div></div>
-            </div>
-     </div>
-     <footer>
-        <div class="informacoes">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> MasterMari | 2 Quiz</title>
+   <link rel="stylesheet" href="./css/segundoQuiz.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,200&family=Petemoss&display=swap"
+      rel="stylesheet">
+   <link rel="icon"
+      href="https://cdn-icons.flaticon.com/png/512/3726/premium/3726102.png?token=exp=1636819043~hmac=f3f916d7ff15e10e6d0fef2b1058706e">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+
+   <div class="menu">
+      <div class="divTitulo">
+         MasterMari
+      </div>
+      <div class="container">
+         <li>
+
+            <a href="quiz.html">
+               <ul>Quiz</ul>
+            </a>
+            <a href="curiosidades.html">
+               <ul>Historias</ul>
+            </a>
+            <a href="receitas.html">
+               <ul>Receitas</ul>
+            </a>
+            <a href="sobre.html">
+               <ul>Sobre</ul>
+            </a>
+            <a href="graficos.html">
+               <ul>Gráficos</ul>
+            </a>
+         </li>
+         <button class="botaoSair">
+            <div class="textoBotao">Sair</div>
+         </button>
+      </div>
+   </div>
+
+   <div class="imgMacarrons">
+
+      <div id="segundoQuiz" class="SegundoQuiz">
+         <div class="imgSushi"></div>
+         <span>Será que você sabe tudo sobre culinária?</span> <br>
+         <button class="botaoQuiz" onclick="botaoQuiz()">Iniciar Quiz</button>
+         <div></div>
+      </div>
+
+      <div id="pg1" style="display: none;" class="todasPergunta">
+
+         <div class="imgMacarrao"></div>
+         <span>O macarrão vem de qual país?</span> <br> <br>
+         <button id="botoes" onclick="pontos('resposta 1','resposta 2', '1', 'pg1', 'pg2')">Itália</button>
+         <button id="botoes" onclick="pontos('resposta 2','resposta 2', '1', 'pg1', 'pg2')">China</button>
+         <button id="botoes" onclick="pontos('resposta 3', 'resposta 2', '1', 'pg1', 'pg2')">França</button>
+      </div>
+      <div id="pg2" style="display: none;" class="todasPergunta">
+
+         <div class="imgFrutas"></div>
+         <span>Qual é a fruta que mais engorda?</span> <br> <br>
+         <button id="botoes" onclick="pontos('resposta 1','resposta 1', '2', 'pg2', 'pg3')">Abacate</button>
+         <button id="botoes" onclick="pontos('resposta 2','resposta 1', '2', 'pg2', 'pg3')">Mamão</button>
+         <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '2', 'pg2', 'pg3')">Morango</button>
+      </div>
+
+      <div id="pg3" style="display: none;" class="todasPergunta">
+
+         <div class="imgAlimentoMais"></div>
+         <span>Qual é o alimento mais consumido no mundo? </span> <br> <br>
+         <button id="botoes" onclick="pontos('resposta 1','resposta 3', '3', 'pg3', 'pg4')">Arroz</button>
+         <button id="botoes" onclick="pontos('resposta 2','resposta 3', '3', 'pg3', 'pg4')">Earinha de Trigo</button>
+         <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '3', 'pg3', 'pg4')">Leite</button>
+      </div>
+
+      <div id="pg4" style="display: none;" class="todasPergunta">
+
+         <div class="imgAliSaudavel"></div>
+         <span>Qual é o alimento mais saúdavel do mundo? </span> <br> <br>
+         <button id="botoes" onclick="pontos('resposta 1','resposta 1', '4', 'pg4', 'pg5')">Ovo</button>
+         <button id="botoes" onclick="pontos('resposta 2','resposta 1', '4', 'pg4', 'pg5')">Coco</button>
+         <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '4', 'pg4', 'pg5')">Quinoa</button>
+      </div>
+
+      <div id="pg5" style="display: none;" class="todasPergunta">
+
+         <div class="imgCarne"></div>
+         <span>DQual é o país que consome mais carne no mundo? </span> <br> <br>
+         <button id="botoes" onclick="pontos('resposta 1','resposta 3', '5', 'pg5', 'pg6')">Argentina</button>
+         <button id="botoes" onclick="pontos('resposta 2','resposta 3', '5', 'pg5', 'pg6')">Brasil</button>
+         <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '5', 'pg5', 'pg6')">Estados Unidos</button>
+      </div>
+
+      <div id="pg6" style="display: none;" class="todasPergunta">
+
+         <div class="imgBrasil"></div>
+         <span>Qual é o alimento mais consumido no Brasil? </span> <br> <br>
+         <button id="botoes" onclick="pontos('resposta 1','resposta 1', '6', 'pg6', 'pg7')">Arroz</button>
+         <button id="botoes" onclick="pontos('resposta 2','resposta 1', '6', 'pg6', 'pg7')">Feijão</button>
+         <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '6', 'pg6', 'pg7')">Ovo</button>
+      </div>
+
+      <div id="resposta"></div>
+      <div id="btn_next">
+
+      </div>
+      </div>
+      <footer>
+         <div class="informacoes">
             <p>Quer ficar por dentro de todas as novidades?</p>
             <p>Cadastre-se no nosso site agora</p>
             <p>E fique por dentro de tudo do mundo da Gastronomia</p>
             <p>Nós acompanhe também pelas nossas redes sociais</p>
             <ul class="socialMedias">
                <li><a href="https://github.com/mariana-medinam"><i class="fa fa-github-square"></i></a></li>
-               <li><a href="https://www.linkedin.com/in/mariana-monteiro-medina-44a5ba200"><i class="fa fa-linkedin-square"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/mariana-monteiro-medina-44a5ba200"><i
+                        class="fa fa-linkedin-square"></i></a></li>
             </ul>
-        </div>
-     </footer>
+         </div>
+      </footer>
 
- 
+
 </body>
+
 </html>
 
 <script>
-      let botaoSair = document.querySelector(".botaoSair");
-   botaoSair.addEventListener("click", function() {
+   let botaoSair = document.querySelector(".botaoSair");
+   botaoSair.addEventListener("click", function () {
       window.location = "index.html";
    })
 
 
+   function botaoQuiz() {
+     segundoQuiz.style.display ='none'
+     pg1.style.display = 'block'
+     
+  }
+
+   var pontuacao = 0;
+    var nivel = [];
+
+    function pontos(respostaBotao, respostaCerta, nivelAtual, tirar, exibir) {
+
+        if (respostaBotao == respostaCerta) {
+            pontuacao = pontuacao + 10;
+            resposta.innerHTML = `
+                    oba!!! vocÊ acertou!!
+                    resposta correta: ${respostaCerta} <br>
+                    pontos: ${pontuacao}
+                `;
+            console.log("ta indo")
+        } else {
+            resposta.innerHTML = `
+                    que pena, vocÊ errou <br>
+                    resposta correta: ${respostaCerta}; <br> 
+                        pontos: ${pontuacao}
+
+                `;
+            console.log("ta indo")
+        }
+
+        // botoes.disabled = true; -- depois você tenta arrumar isso que eu não tô conseguindo, para ele não poder mudar de resposta
+
+        nextNivel = nivelAtual
+        paraIr = exibir;
+        paraTirar = tirar;
 
 
-   function botaoQuiz(){
+        nivel.push(nivelAtual);
+        btn_next.innerHTML = `
+            <button class= "botaoProximo" onclick="proximo('${nextNivel}', '${paraTirar}', '${paraIr}')">Proximo</button>
+            `
+    }
 
-   }
+
+    function proximo(nivelAtual, atual, proximo) {
+        verificar = nivel.length;
+
+        if (nivelAtual == verificar) {
+            document.getElementById(atual).style.display = "none";
+            document.getElementById(proximo).style.display = "block";
+
+        } else {
+            alert("você não respondeu o anterior")
+        }
+    }
+
+
+  
 
 </script>

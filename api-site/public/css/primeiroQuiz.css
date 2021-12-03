@@ -113,7 +113,85 @@ body {
     border-radius: 20px;
     margin-top: 20px;
 }
+.todasPergunta{
+    background-color: #741111;
+    height: 80vh;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+    padding: 10px;
+    border-radius: 20px; 
+}
 
+.imgBacalhoada{
+    background-image: url("https://t1.rg.ltmcdn.com/pt/images/4/7/5/bacalhoada_tradicional_portuguesa_6574_orig.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+}
+.imgFrangoXadrez{
+    background-image: url("https://receitinhas.s3-sa-east-1.amazonaws.com/wp-content/uploads/2016/12/frango-xadrez.jpeg-848x477.png");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover;
+}
+.imgEmpanada{
+    background-image: url("https://previews.123rf.com/images/fotorojas/fotorojas2005/fotorojas200500171/148015306-empanda-top-view-vegetarian-patty.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgLasanha{
+    background-image: url("https://i.ytimg.com/vi/FrdumyhYaZY/maxresdefault.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgFondue{
+    background-image: url("https://guiadaculinaria.com/wp-content/uploads/2019/07/receitas-de-fondue-de-queijo-3-1200x900.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgStrogonoff{
+    background-image: url("https://img.itdg.com.br/tdg/images/blog/uploads/2018/06/como-fazer-o-verdadeiro-estrogonofe-russo-300x200.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+.imgPaella{
+    background-image: url("https://www.comidaereceitas.com.br/wp-content/uploads/2020/07/paella_frutos.jpg");
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
+#botoes{
+   background-color: #741111;
+   color: #fff;
+   font-family: 'Montserrat', sans-serif;
+   border: #fff 2px solid;
+   border-radius: 8px;
+   width: 100%;
+   
+}
+#botoes:hover{
+    width: 102%;
+}
+
+.todasPergunta span{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
 .informacoes{
     background-color: #741111;
     height: 30vh;
