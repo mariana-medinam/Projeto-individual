@@ -60,76 +60,80 @@
       </div>
 
       <div id="pg1" style="display: none;" class="todasPergunta">
-
          <div class="imgMacarrao"></div>
          <span>O macarrão vem de qual país?</span> <br> <br>
          <button id="botoes" onclick="pontos('resposta 1','resposta 2', '1', 'pg1', 'pg2')">Itália</button>
          <button id="botoes" onclick="pontos('resposta 2','resposta 2', '1', 'pg1', 'pg2')">China</button>
          <button id="botoes" onclick="pontos('resposta 3', 'resposta 2', '1', 'pg1', 'pg2')">França</button>
+         <button id="botoes" onclick="proximo('1', 'pg1', 'pg2')">Próximo</button>
       </div>
       <div id="pg2" style="display: none;" class="todasPergunta">
-
          <div class="imgFrutas"></div>
          <span>Qual é a fruta que mais engorda?</span> <br> <br>
          <button id="botoes" onclick="pontos('resposta 1','resposta 1', '2', 'pg2', 'pg3')">Abacate</button>
          <button id="botoes" onclick="pontos('resposta 2','resposta 1', '2', 'pg2', 'pg3')">Mamão</button>
          <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '2', 'pg2', 'pg3')">Morango</button>
+         <button id="botoes" onclick="proximo('2', 'pg2', 'pg3')">Próximo</button>
       </div>
 
       <div id="pg3" style="display: none;" class="todasPergunta">
-
          <div class="imgAlimentoMais"></div>
          <span>Qual é o alimento mais consumido no mundo? </span> <br> <br>
          <button id="botoes" onclick="pontos('resposta 1','resposta 3', '3', 'pg3', 'pg4')">Arroz</button>
-         <button id="botoes" onclick="pontos('resposta 2','resposta 3', '3', 'pg3', 'pg4')">Earinha de Trigo</button>
+         <button id="botoes" onclick="pontos('resposta 2','resposta 3', '3', 'pg3', 'pg4')">Farinha de Trigo</button>
          <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '3', 'pg3', 'pg4')">Leite</button>
+         <button id="botoes" onclick="proximo('3', 'pg3', 'pg4')">Próximo</button>
       </div>
 
       <div id="pg4" style="display: none;" class="todasPergunta">
-
          <div class="imgAliSaudavel"></div>
          <span>Qual é o alimento mais saúdavel do mundo? </span> <br> <br>
          <button id="botoes" onclick="pontos('resposta 1','resposta 1', '4', 'pg4', 'pg5')">Ovo</button>
          <button id="botoes" onclick="pontos('resposta 2','resposta 1', '4', 'pg4', 'pg5')">Coco</button>
          <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '4', 'pg4', 'pg5')">Quinoa</button>
+         <button id="botoes" onclick="proximo('4', 'pg4', 'pg5')">Próximo</button>
       </div>
 
       <div id="pg5" style="display: none;" class="todasPergunta">
-
          <div class="imgCarne"></div>
-         <span>DQual é o país que consome mais carne no mundo? </span> <br> <br>
+         <span>Qual é o país que consome mais carne no mundo? </span> <br> <br>
          <button id="botoes" onclick="pontos('resposta 1','resposta 3', '5', 'pg5', 'pg6')">Argentina</button>
          <button id="botoes" onclick="pontos('resposta 2','resposta 3', '5', 'pg5', 'pg6')">Brasil</button>
          <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '5', 'pg5', 'pg6')">Estados Unidos</button>
+         <button id="botoes" onclick="proximo('5', 'pg5', 'pg6')">Próximo</button>
       </div>
 
       <div id="pg6" style="display: none;" class="todasPergunta">
-
          <div class="imgBrasil"></div>
          <span>Qual é o alimento mais consumido no Brasil? </span> <br> <br>
          <button id="botoes" onclick="pontos('resposta 1','resposta 1', '6', 'pg6', 'pg7')">Arroz</button>
          <button id="botoes" onclick="pontos('resposta 2','resposta 1', '6', 'pg6', 'pg7')">Feijão</button>
          <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '6', 'pg6', 'pg7')">Ovo</button>
+         <button id="botoes" onclick="proximo('6', 'pg6', 'pg7')">Próximo</button>
       </div>
 
-      <div id="resposta"></div>
-      <div id="btn_next">
+      <div id="pg7" style="display: none;" class="todasPergunta">
+         <span>Parabéns sua pontução foi de: <span id="textoPontuacao"></span></span>
+      </div>
 
+      <!-- <div id="resposta"></div> -->
+      <!-- <div id="btn_next"> -->
+
+   </div>
+   </div>
+   <footer>
+      <div class="informacoes">
+         <p>Quer ficar por dentro de todas as novidades?</p>
+         <p>Cadastre-se no nosso site agora</p>
+         <p>E fique por dentro de tudo do mundo da Gastronomia</p>
+         <p>Nós acompanhe também pelas nossas redes sociais</p>
+         <ul class="socialMedias">
+            <li><a href="https://github.com/mariana-medinam"><i class="fa fa-github-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/mariana-monteiro-medina-44a5ba200"><i
+                     class="fa fa-linkedin-square"></i></a></li>
+         </ul>
       </div>
-      </div>
-      <footer>
-         <div class="informacoes">
-            <p>Quer ficar por dentro de todas as novidades?</p>
-            <p>Cadastre-se no nosso site agora</p>
-            <p>E fique por dentro de tudo do mundo da Gastronomia</p>
-            <p>Nós acompanhe também pelas nossas redes sociais</p>
-            <ul class="socialMedias">
-               <li><a href="https://github.com/mariana-medinam"><i class="fa fa-github-square"></i></a></li>
-               <li><a href="https://www.linkedin.com/in/mariana-monteiro-medina-44a5ba200"><i
-                        class="fa fa-linkedin-square"></i></a></li>
-            </ul>
-         </div>
-      </footer>
+   </footer>
 
 
 </body>
@@ -144,61 +148,56 @@
 
 
    function botaoQuiz() {
-     segundoQuiz.style.display ='none'
-     pg1.style.display = 'block'
-     
-  }
+      segundoQuiz.style.display = 'none'
+      pg1.style.display = 'block'
+
+   }
 
    var pontuacao = 0;
-    var nivel = [];
+   var nivel = [];
 
-    function pontos(respostaBotao, respostaCerta, nivelAtual, tirar, exibir) {
+   function pontos(respostaBotao, respostaCerta, nivelAtual, tirar, exibir) {
 
-        if (respostaBotao == respostaCerta) {
-            pontuacao = pontuacao + 10;
-            resposta.innerHTML = `
-                    oba!!! vocÊ acertou!!
-                    resposta correta: ${respostaCerta} <br>
-                    pontos: ${pontuacao}
-                `;
-            console.log("ta indo")
-        } else {
-            resposta.innerHTML = `
-                    que pena, vocÊ errou <br>
-                    resposta correta: ${respostaCerta}; <br> 
-                        pontos: ${pontuacao}
+      if (respostaBotao == respostaCerta) {
+         pontuacao += 10;
+         alert(` Resposta certa pontos: ${pontuacao}`)
+      } else {
 
-                `;
-            console.log("ta indo")
-        }
+         alert(`Resposta errada
+                        resposta correta: ${respostaCerta}
+                        pontos: ${pontuacao}`)
 
-        // botoes.disabled = true; -- depois você tenta arrumar isso que eu não tô conseguindo, para ele não poder mudar de resposta
-
-        nextNivel = nivelAtual
-        paraIr = exibir;
-        paraTirar = tirar;
+      }
 
 
-        nivel.push(nivelAtual);
-        btn_next.innerHTML = `
-            <button class= "botaoProximo" onclick="proximo('${nextNivel}', '${paraTirar}', '${paraIr}')">Proximo</button>
-            `
-    }
+      nextNivel = nivelAtual
+      paraIr = exibir;
+      paraTirar = tirar;
 
 
-    function proximo(nivelAtual, atual, proximo) {
-        verificar = nivel.length;
-
-        if (nivelAtual == verificar) {
-            document.getElementById(atual).style.display = "none";
-            document.getElementById(proximo).style.display = "block";
-
-        } else {
-            alert("você não respondeu o anterior")
-        }
-    }
+      nivel.push(nivelAtual);
+      //   btn_next.innerHTML = `
+      //       <button class= "botaoProximo" onclick="proximo('${nextNivel}', '${paraTirar}', '${paraIr}')">Proximo</button>
+      //       `
+   }
 
 
-  
+   function proximo(nivelAtual, atual, proximo) {
+      verificar = nivel.length;
+
+      if (nivelAtual == verificar) {
+         document.getElementById(atual).style.display = "none";
+         document.getElementById(proximo).style.display = "block";
+
+      } else {
+         alert("você não respondeu o anterior")
+      }
+
+      document.getElementById("textoPontuacao").innerHTML = pontuacao;
+      
+   }
+
+
+
 
 </script>

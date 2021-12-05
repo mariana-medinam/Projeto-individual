@@ -11,5 +11,10 @@ insert into culinaria(nome,img)values
     
   select * from usuario;
   
+  delete from usuario where id = 7;
+  
+  
+  
+  
   
     

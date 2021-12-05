@@ -99,6 +99,11 @@ body {
    grid-gap: 3%;
    margin-left: 8vw;
 }
+
+.gridContainer a {
+    text-decoration: none;
+    color: black;
+}
 .divTotal{
     margin-top: 5%;
     margin-left: 1%;

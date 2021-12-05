@@ -49,7 +49,7 @@
             <div id="terceiroQuiz" class="terceiroQuiz">
               <div class="imgDoce"></div>
                 <div class="quizTitulo">Você consegue adivinhar qual é o doce?</span> <br> 
-                <button class="botaoQuiz" onclick="botaoQuiz()">Iniciar Quiz</button>
+                <button class="botaoQuiz" onclick="iniciarQuiz()">Iniciar Quiz</button>
             </div>
 
 
@@ -116,8 +116,8 @@
             </div>
 
       
-            <div id="resposta"></div>
-            <div id="btn_next">
+            <!-- <div id="resposta"></div> -->
+            <!-- <div id="btn_next"> -->
       
             </div>
 
@@ -149,11 +149,10 @@
       window.location = "index.html";
    })
 
-   function botaoQuiz() {
+   function iniciarQuiz() {
      terceiroQuiz.style.display ='none'
      pg1.style.display = 'block'
-     
-  }
+   }
 
    var pontuacao = 0;
     var nivel = [];
@@ -162,23 +161,17 @@
 
         if (respostaBotao == respostaCerta) {
             pontuacao = pontuacao + 10;
-            resposta.innerHTML = `
-                    oba!!! vocÊ acertou!!
-                    resposta correta: ${respostaCerta} <br>
-                    pontos: ${pontuacao}
-                `;
+             alert( ` Resposta correta
+                    pontos: ${pontuacao} `)
             console.log("ta indo")
         } else {
-            resposta.innerHTML = `
-                    que pena, vocÊ errou <br>
-                    resposta correta: ${respostaCerta}; <br> 
-                        pontos: ${pontuacao}
-
-                `;
+           alert( `Resposta errada
+                  resposta correta: ${respostaCerta}
+                  pontos: ${pontuacao}`)
             console.log("ta indo")
         }
 
-        // botoes.disabled = true; -- depois você tenta arrumar isso que eu não tô conseguindo, para ele não poder mudar de resposta
+      
 
         nextNivel = nivelAtual
         paraIr = exibir;
@@ -186,9 +179,9 @@
 
 
         nivel.push(nivelAtual);
-        btn_next.innerHTML = `
-            <button class= "botaoProximo" onclick="proximo('${nextNivel}', '${paraTirar}', '${paraIr}')">Proximo</button>
-            `
+      //   btn_next.innerHTML = `
+            // <button class= "botaoProximo" onclick="proximo('${nextNivel}', '${paraTirar}', '${paraIr}')">Proximo</button>
+            // `
     }
 
 
@@ -203,11 +196,5 @@
             alert("você não respondeu o anterior")
         }
     }
-
-
-
-   function botaoQuiz(){
-
-   }
 
 </script>

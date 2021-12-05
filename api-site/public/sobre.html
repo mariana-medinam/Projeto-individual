@@ -59,11 +59,11 @@
    <div class="sobreMim">
       <div class="minhasFotos">
         <img class="selected" src="./imagem/marianaPequenaCozinhando.jpeg">
-        <img class="selected" src="./imagem/marianaNoRestauranteJacquin.jpeg">
-        <img class="selected" src="./imagem/daniloMarianaÇava.jpeg">
-        <img class="selected" src="./imagem/pratoDaniloÇava.jpeg">
-        <img class="selected" src="./imagem/pratoMarianaÇava.jpeg">
-        <img class="selected" src="./imagem/marianaEFogaça.jpeg">
+        <img src="./imagem/marianaNoRestauranteJacquin.jpeg">
+        <img src="./imagem/daniloMarianaÇava.jpeg">
+        <img src="./imagem/pratoDaniloÇava.jpeg">
+        <img src="./imagem/pratoMarianaÇava.jpeg">
+        <img src="./imagem/marianaEFogaça.jpeg">
       </div>
 
       <div class="textoContainer">   
@@ -77,7 +77,6 @@
 
          <p> Sei que esse amor pela gastronomia é algo que vou levar comigo pelo resto da minha vida, e que terei a oportunidade de realizar todos os desejos que a Mariana de 6 anos sempre sonhou.</p>
       </div>
-
    </div>
 
    <div class="imgSushiDois"></div>
@@ -152,16 +151,17 @@
       window.location = "index.html";
    })
 
-     let time = 1000
+     let time = 3000
       currentImageIndex = 0
       imagens = document.querySelectorAll(".minhasFotos img");
       max = imagens.length;
 
 
    function nextImagem() {
+      imagens[currentImageIndex].classList.remove("selected");
+
       currentImageIndex++
         
-      imagens[currentImageIndex].classList.remove("selected")
       if(currentImageIndex >= max) {
          currentImageIndex = 0
       }

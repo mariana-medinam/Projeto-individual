@@ -104,15 +104,14 @@ body {
 .sobreMim {
     background-color: #741111;
     height: 110vh;
-    padding: 10vh;
+    padding: 13vh;
 }
 .sobreMim .minhasFotos{
     width: 100%;
     max-width: 2000px;
-    height: 75vh;
+    height: 105vh;
     max-height: 2000px;
     position: relative;
-    
 }
 .minhasFotos img{
     opacity: 0;
@@ -140,7 +139,7 @@ body {
     color: #fff;
 }
 .textoContainer{
-    margin-top: -80vh;
+    margin-top: -105vh;
 }
 
 .imgSushiDois{

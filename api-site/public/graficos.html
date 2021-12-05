@@ -62,38 +62,38 @@
 
    <div class="gridContainer">
 
-      <div class="gridCards japonesa" onclick="curtir(1)">
+      <div class="gridCards japonesa" onclick="curtir(1)"><a href="#divGrafico">
          <div class="imgJaponesa"></div>
          <span>Cúlinaria Japonesa</span>
-      </div>
+      </a></div>
 
-      <div class="gridCards francesa" onclick="curtir(2)">
+      <div class="gridCards francesa" onclick="curtir(2)"><a href="#divGrafico">
          <div class="imgFrancesa"></div>
          <span> Cúlinaria Francesa</span>
-      </div>
+      </a></div>
 
-      <div class="gridCards brasileira" onclick="curtir(3)">
+      <div class="gridCards brasileira" onclick="curtir(3)"><a href="#divGrafico">
          <div class="imgBrasileira"></div>
          <span>Cúlinaria Brasileira</span>
-      </div>
-      <div class="gridCards mexicana" onclick="curtir(4)">
+      </a></div>
+      <div class="gridCards mexicana" onclick="curtir(4)"><a href="#divGrafico">
          <div class="imgMexicana"></div>
          <span>Cúlinaria Mexicana</span>
-      </div>
+      </a></div>
 
-      <div class="gridCards italiana" onclick="curtir(5)">
+      <div class="gridCards italiana" onclick="curtir(5)"><a href="#divGrafico">
          <div class="imgItaliana"></div>
          <span>Cúlinaria Italiana</span>
-      </div>
-      <div class="gridCards arabe" onclick="curtir(6)">
+      </a></div>
+      <div class="gridCards arabe" onclick="curtir(6)"><a href="#divGrafico">
          <div class="imgArabe"></div>
          <span>Cúlinaria Àrabe</span>
-      </div>  
+      </a></div>  
    </div>
    <div id="divTotal" class="divTotal">
    </div>
 
-   <div class="graph">
+   <div class="graph" id="divGrafico">
       <canvas id="myChart" style="width: 100%; height: 100%"></canvas>
    </div>
 
@@ -164,7 +164,10 @@
             idCulinaria: idCulinaria,
          })
       }).then(function (resposta) {
-         alert('Curtiu essa culinária!');
+
+         setTimeout(() => {
+            location.reload();
+         }, 500);
       });
 
    }
