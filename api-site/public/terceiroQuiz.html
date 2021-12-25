@@ -37,7 +37,7 @@
                  <ul>Sobre</ul>
               </a>
               <a href="graficos.html">
-                 <ul>Gráficos</ul>
+                 <ul>Culinárias</ul>
               </a>
               </li>
               <button class="botaoSair"><div class="textoBotao">Sair</div></button>
@@ -54,65 +54,66 @@
 
 
             <div id="pg1" style="display: none;" class="todasPergunta">
-
                <div class="imgMacarrons2"></div>
                <span>Você sabe o nome desse doce?</span> <br> <br>
                <button id="botoes" onclick="pontos('resposta 1','resposta 2', '1', 'pg1', 'pg2')">Tiramisú</button>
                <button id="botoes" onclick="pontos('resposta 2','resposta 2', '1', 'pg1', 'pg2')">Macorrons</button>
                <button id="botoes" onclick="pontos('resposta 3', 'resposta 2', '1', 'pg1', 'pg2')">Pannacotta</button>
+               <button id="botoes" onclick="proximo('1', 'pg1', 'pg2')">Próximo</button>
             </div>
+
             <div id="pg2" style="display: none;" class="todasPergunta">
-      
                <div class="imgProfiteroles"></div>
                <span>Você sabe o nome desse doce?</span> <br> <br>
                <button id="botoes" onclick="pontos('resposta 1','resposta 1', '2', 'pg2', 'pg3')">Profiteroles</button>
                <button id="botoes" onclick="pontos('resposta 2','resposta 1', '2', 'pg2', 'pg3')">Pão De Ló</button>
                <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '2', 'pg2', 'pg3')">Bolos</button>
+               <button id="botoes" onclick="proximo('1', 'pg2', 'pg3')">Próximo</button>
             </div>
       
             <div id="pg3" style="display: none;" class="todasPergunta">
-      
                <div class="imgPetitGateau"></div>
                <span>Você sabe o nome desse doce? </span> <br> <br>
                <button id="botoes" onclick="pontos('resposta 1','resposta 3', '3', 'pg3', 'pg4')">Capcakes</button>
                <button id="botoes" onclick="pontos('resposta 2','resposta 3', '3', 'pg3', 'pg4')">Bolos</button>
                <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '3', 'pg3', 'pg4')">Petit Gateau</button>
+               <button id="botoes" onclick="proximo('1', 'pg3', 'pg4')">Próximo</button>
             </div>
       
             <div id="pg4" style="display: none;" class="todasPergunta">
-      
                <div class="imgCheesecake"></div>
                <span>Você sabe o nome desse doce? </span> <br> <br>
                <button id="botoes" onclick="pontos('resposta 1','resposta 1', '4', 'pg4', 'pg5')">CheeseCake</button>
                <button id="botoes" onclick="pontos('resposta 2','resposta 1', '4', 'pg4', 'pg5')">Medeleines</button>
                <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '4', 'pg4', 'pg5')">torta De Banana</button>
+               <button id="botoes" onclick="proximo('1', 'pg4', 'pg5')">Próximo</button>
             </div>
       
             <div id="pg5" style="display: none;" class="todasPergunta">
-      
                <div class="imgPalova"></div>
                <span>Você sabe o nome desse doce? </span> <br> <br>
                <button id="botoes" onclick="pontos('resposta 1','resposta 3', '5', 'pg5', 'pg6')">Torta de Holandesa</button>
                <button id="botoes" onclick="pontos('resposta 2','resposta 3', '5', 'pg5', 'pg6')">Torta de maça</button>
                <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '5', 'pg5', 'pg6')">Palova</button>
+               <button id="botoes" onclick="proximo('1', 'pg5', 'pg6')">Próximo</button>
             </div>
       
             <div id="pg6" style="display: none;" class="todasPergunta">
-      
                <div class="imgCremeBrulee"></div>
                <span>Você sabe o nome desse doce? </span> <br> <br>
                <button id="botoes" onclick="pontos('resposta 1','resposta 1', '6', 'pg6', 'pg7')">Créme Brûlée</button>
                <button id="botoes" onclick="pontos('resposta 2','resposta 1', '6', 'pg6', 'pg7')">Musse</button>
                <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '6', 'pg6', 'pg7')">Pannacotta</button>
+               <button id="botoes" onclick="proximo('1', 'pg6', 'pg7')">Próximo</button>
             </div>
 
             <div id="pg7" style="display: none;" class="todasPergunta">
-      
                <div class="imgTiramisu"></div>
                <span>Você sabe o nome desse doce? </span> <br> <br>
                <button id="botoes" onclick="pontos('resposta 1','resposta 1', '6', 'pg7', 'pg8')">Tiramusu</button>
                <button id="botoes" onclick="pontos('resposta 2','resposta 1', '6', 'pg7', 'pg8')">Torta Holandesa</button>
                <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '6', 'pg7', 'pg8')">Torta de chocolate</button>
+               <button id="botoes" onclick="proximo('1', 'pg7', 'pg8')">Próximo</button>
             </div>
 
       
@@ -195,6 +196,7 @@
         } else {
             alert("você não respondeu o anterior")
         }
+        document.getElementById("textoPontuacao").innerHTML = pontuacao;
     }
 
 </script>

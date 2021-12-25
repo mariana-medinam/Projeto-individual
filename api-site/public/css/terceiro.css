@@ -123,6 +123,16 @@ body {
     border-radius: 20px;
     background-size: cover;
 }
+.todasPergunta{
+    background-color: #741111;
+    height: 80vh;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+    padding: 10px;
+    border-radius: 20px; 
+}
 .imgProfiteroles{
     background-image: url("https://www.seriouseats.com/thmb/VMipiifTJhutCAXdMjpriBDbQbk=/1500x1125/filters:fill(auto,1)/20210609-profiteroles-debbie-wee-seriouseats-17-b1ac56cd654549bc896307e919b26edc.jpg");
     width: 100%;

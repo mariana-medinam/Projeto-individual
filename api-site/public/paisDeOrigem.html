@@ -41,7 +41,7 @@
                     <ul>Sobre</ul>
                 </a>
                 <a href="graficos.html">
-                    <ul>Gráficos</ul>
+                    <ul>Culinárias</ul>
                 </a>
             </li>
             <button class="botaoSair">
@@ -63,7 +63,7 @@
             <div class="imgBacalhoada"></div>
             <span>De onde vem Bacalhoada?</span> <br> <br>
             <button id="botoes" onclick="pontos('resposta 1','resposta 2', '1', 'pg1', 'pg2')">Espanha</button>
-            <button id="botoes" onclick="pontos('resposta 2','resposta 2', '1', 'pg1', 'pg2')">Porgutal</button>
+            <button id="botoes" onclick="pontos('resposta 2','resposta 2', '1', 'pg1', 'pg2')">Portugal</button>
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 2', '1', 'pg1', 'pg2')">Inglaterra</button>
             <button id="botoes" onclick="proximo('1','pg1','pg2')">Próximo</button>
         </div>
@@ -98,9 +98,9 @@
         <div id="pg5" style="display: none;" class="todasPergunta">
             <div class="imgFondue"></div>
             <span>De onde vem o Fondue de Queijo? </span> <br> <br>
-            <button id="botoes" onclick="pontos('resposta 1','resposta 3', '5', 'pg5', 'pg6')">Suiça</button>
-            <button id="botoes" onclick="pontos('resposta 2','resposta 3', '5', 'pg5', 'pg6')">França</button>
-            <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '5', 'pg5', 'pg6')">Itália</button>
+            <button id="botoes" onclick="pontos('resposta 1','resposta 1', '5', 'pg5', 'pg6')">Suiça</button>
+            <button id="botoes" onclick="pontos('resposta 2','resposta 1', '5', 'pg5', 'pg6')">França</button>
+            <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '5', 'pg5', 'pg6')">Itália</button>
             <button id="botoes" onclick="proximo('5','pg5', 'pg6')">Próximo</button>
         </div>
 
@@ -121,8 +121,13 @@
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '7', 'pg6', 'pg8')">Espanha</button>
             <button id="botoes" onclick="proximo('7', 'pg7', 'pg8')">Próximo</button>
         </div>
+        
 
-        <div id="resposta"></div>
+        <div id="pg8" style="display: none;" class="todasPergunta">
+            <div class="imgParabens"></div>
+            <span>Parabéns sua pontução foi de: <span id="textoPontuacao"></span></span>
+         </div>
+        <!-- <div id="resposta"></div> -->
         <!-- <div id="btn_next"> -->
             
     </div>
@@ -166,17 +171,15 @@
 
         if (respostaBotao == respostaCerta) {
             pontuacao = pontuacao + 10;
-            alert(`oba!!! vocÊ acertou!!
+            alert(`Resposta correta
                     resposta correta: ${respostaCerta}
                     pontos: ${pontuacao}
-                `);
+                `)
             console.log("ta indo")
         } else {
-            alert(` que pena, vocÊ errou <br>
+            alert(` Resposta errada
                     resposta correta: ${respostaCerta}; 
-                        pontos: ${pontuacao}
-
-                `);
+                        pontos: ${pontuacao}`)
             console.log("ta indo")
         }
 
@@ -203,6 +206,8 @@
         } else {
             alert("você não respondeu o anterior")
         }
+
+        document.getElementById("textoPontuacao").innerHTML = pontuacao;
     }
 
 
