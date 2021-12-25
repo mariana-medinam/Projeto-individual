@@ -47,6 +47,9 @@ body {
     color: #fff;
     cursor: pointer;
 }
+button {
+    cursor: pointer;
+}
 .botaoSair{
     background-color: #741111;
     border-radius: 8px;

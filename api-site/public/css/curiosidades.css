@@ -120,6 +120,7 @@ body {
 }
 .curiosidades .imgBrigadeiro{
     background-image: url("http://trufaschocolatebombons.com.br/wp-content/uploads/2016/12/brigadeiro-gourmet-tradicional-receita.jpg");
+    /* algo está errado com a url, tente usar outra mesmo */
     background-size: cover;
     border-radius: 30px;
     height: 55vh;
