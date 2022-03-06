@@ -65,7 +65,7 @@
             <button id="botoes" onclick="pontos('resposta 1','resposta 2', '1', 'pg1', 'pg2')">Espanha</button>
             <button id="botoes" onclick="pontos('resposta 2','resposta 2', '1', 'pg1', 'pg2')">Portugal</button>
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 2', '1', 'pg1', 'pg2')">Inglaterra</button>
-            <button id="botoes" onclick="proximo('1','pg1','pg2')">Próximo</button>
+            <!-- <button id="botoes" onclick="proximo('1','pg1','pg2')">Próximo</button> -->
         </div>
 
         <div id="pg2" style="display: none;" class="todasPergunta">
@@ -74,7 +74,7 @@
             <button id="botoes" onclick="pontos('resposta 1','resposta 1', '2', 'pg2', 'pg3')">Japão</button>
             <button id="botoes" onclick="pontos('resposta 2','resposta 1', '2', 'pg2', 'pg3')">China</button>
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '2', 'pg2', 'pg3')">Carreia do Sul</button>
-            <button id="botoes" onclick="proximo('2','pg2','pg3')">Próximo</button>
+            <!-- <button id="botoes" onclick="proximo('2','pg2','pg3')">Próximo</button> -->
         </div>
 
         <div id="pg3" style="display: none;" class="todasPergunta">
@@ -83,7 +83,7 @@
             <button id="botoes" onclick="pontos('resposta 1','resposta 3', '3', 'pg3', 'pg4')">Chile</button>
             <button id="botoes" onclick="pontos('resposta 2','resposta 3', '3', 'pg3', 'pg4')">Espanha</button>
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '3', 'pg3', 'pg4')">Argentina</button>
-            <button id="botoes" onclick="proximo('3', 'pg3', 'pg4')">Próximo</button>
+            <!-- <button id="botoes" onclick="proximo('3', 'pg3', 'pg4')">Próximo</button> -->
         </div>
 
         <div id="pg4" style="display: none;" class="todasPergunta">
@@ -92,7 +92,7 @@
             <button id="botoes" onclick="pontos('resposta 1','resposta 1', '4', 'pg4', 'pg5')">Itália</button>
             <button id="botoes" onclick="pontos('resposta 2','resposta 1', '4', 'pg4', 'pg5')">França</button>
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '4', 'pg4', 'pg5')">Porgutal</button>
-            <button id="botoes" onclick="proximo('4', 'pg4', 'pg5')">Próximo</button>
+            <!-- <button id="botoes" onclick="proximo('4', 'pg4', 'pg5')">Próximo</button> -->
         </div>
 
         <div id="pg5" style="display: none;" class="todasPergunta">
@@ -101,7 +101,7 @@
             <button id="botoes" onclick="pontos('resposta 1','resposta 1', '5', 'pg5', 'pg6')">Suiça</button>
             <button id="botoes" onclick="pontos('resposta 2','resposta 1', '5', 'pg5', 'pg6')">França</button>
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '5', 'pg5', 'pg6')">Itália</button>
-            <button id="botoes" onclick="proximo('5','pg5', 'pg6')">Próximo</button>
+            <!-- <button id="botoes" onclick="proximo('5','pg5', 'pg6')">Próximo</button> -->
         </div>
 
         <div id="pg6" style="display: none;" class="todasPergunta">
@@ -110,7 +110,7 @@
             <button id="botoes" onclick="pontos('resposta 1','resposta 1', '6', 'pg6', 'pg7')">Rússia</button>
             <button id="botoes" onclick="pontos('resposta 2','resposta 1', '6', 'pg6', 'pg7')">Brasil</button>
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 1', '6', 'pg6', 'pg7')">França</button>
-            <button id="botoes" onclick="proximo('6', 'pg6', 'pg7')">Próximo</button>
+            <!-- <button id="botoes" onclick="proximo('6', 'pg6', 'pg7')">Próximo</button> -->
         </div>
 
         <div id="pg7" style="display: none;" class="todasPergunta">
@@ -119,7 +119,7 @@
             <button id="botoes" onclick="pontos('resposta 1','resposta 3', '7', 'pg6', 'pg8')">Argentina</button>
             <button id="botoes" onclick="pontos('resposta 2','resposta 3', '7', 'pg6', 'pg8')">Portugal</button>
             <button id="botoes" onclick="pontos('resposta 3', 'resposta 3', '7', 'pg6', 'pg8')">Espanha</button>
-            <button id="botoes" onclick="proximo('7', 'pg7', 'pg8')">Próximo</button>
+            <!-- <button id="botoes" onclick="proximo('7', 'pg7', 'pg8')">Próximo</button> -->
         </div>
         
 
@@ -165,7 +165,6 @@
     }
 
     var pontuacao = 0;
-    var nivel = [];
 
     function pontos(respostaBotao, respostaCerta, nivelAtual, tirar, exibir) {
 
@@ -183,32 +182,12 @@
             console.log("ta indo")
         }
 
-
-
-        nextNivel = nivelAtual
-        paraIr = exibir;
-        paraTirar = tirar;
-
-
-        nivel.push(nivelAtual);
-        //   btn_next.innerHTML = 
-        //   `<button class= "botaoProximo" onclick="proximo('${nextNivel}', '${paraTirar}', '${paraIr}')">Proximo</button>`
+        proximo(nivelAtual, tirar, exibir)
     }
 
 
     function proximo(nivelAtual, atual, proximo) {
-        verificar = nivel.length;
-
-        if (nivelAtual == verificar) {
-            document.getElementById(atual).style.display = "none";
-            document.getElementById(proximo).style.display = "block";
-
-        } else {
-            alert("você não respondeu o anterior")
-        }
-
-        document.getElementById("textoPontuacao").innerHTML = pontuacao;
+        document.getElementById(atual).style.display = "none";
+        document.getElementById(proximo).style.display = "block";
     }
-
-
 </script>

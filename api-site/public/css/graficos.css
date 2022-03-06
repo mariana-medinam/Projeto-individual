@@ -114,13 +114,6 @@ body {
     padding: 10px;
     border-radius: 20px; 
 }
-.gridCards .imgJaponesa{
-    background-image: url("https://images.pexels.com/photos/3763799/pexels-photo-3763799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    width: 100%;
-    height: 42vh;
-    border-radius: 20px;
-    background-size: cover; 
-}
 .gridCards span{
     color: #000;
     font-family: 'Montserrat', sans-serif;
@@ -128,7 +121,13 @@ body {
     font-weight: bolder;
     margin-left: 2%;
 }
-
+.gridCards .imgJaponesa{
+    background-image: url("https://images.pexels.com/photos/3763799/pexels-photo-3763799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    width: 100%;
+    height: 42vh;
+    border-radius: 20px;
+    background-size: cover; 
+}
 .gridCards .imgFrancesa{
     background-image: url("https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     width: 100%;

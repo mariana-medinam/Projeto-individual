@@ -81,81 +81,29 @@ a{
     background-image: url(../imagem/imgCarne.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 130vh;
+    height: 80vh;
     width: 100%;
 }
-.containerQuizReceitaSobre{
-    margin-left: 8%;
+.chamarUsuario{
+    padding-top: 8%;
+    margin-left: 15%;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 150px 150px;
+    grid-gap: 10%;
+  
 }
-.quiz{
+.gridCards{
     background-color: #EDBE7A;
-    height: 35%;
-    width: 30%;
-    font-family: 'Montserrat', sans-serif;
-   
-    font-weight: bolder;
-    font-size: 25px;
-    padding: 15px;
+    padding: 10px;
+    border-radius: 20px; 
 }
-.receitas{
-    background-color: #EDBE7A;
-    height: 35%;
-    width: 30%;
-    margin-top: 40px;
-     font-size: 25px;
+.gridCards span{
+    color: #000;
     font-family: 'Montserrat', sans-serif;
-   
+    font-size: 17px;
     font-weight: bolder;
-    padding: 15px;
-}
-.sobre{
-    background-color: #EDBE7A;
-    height: 35%;
-    width: 30%;
-    margin-top: 40px;
-    font-family: 'Montserrat', sans-serif;
-   
-    font-weight: bolder;
-    font-size: 25px;
-    padding: 15px;
-}
-.containerCuriosidadeGraficoChamarUsuario{
-    margin-left: 60%;
-    margin-top: -49%;
-    width: 100%;
-}
-.curiosidades{
-    background-color: #EDBE7A;
-    height: 35%;
-    width: 30%;
-    margin-top: 40px;
-    font-family: 'Montserrat', sans-serif;
-   
-    font-weight: bolder;
-    font-size: 25px;
-    padding: 15px;
-}
-.graficos{
-    background-color: #EDBE7A;
-    height: 35%;
-    width: 30%;
-    margin-top: 40px;
-    font-family: 'Montserrat', sans-serif;
-    
-    font-weight: bolder;
-    font-size: 25px;
-    padding: 15px;
-}
-.chamarUsuarioParaSite{
-    background-color: #EDBE7A;
-    height: 35%;
-    width: 30%;
-    margin-top: 40px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    font-size: 25px;
-    padding: 15px;
-
+    margin-left: 2%;
 }
 .informacoes{
     background-color: #741111;
